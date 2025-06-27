@@ -1,0 +1,15 @@
+{
+  "name": "vijayandem-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "generate-sitemap": "node generate-sitemap.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/And3m/vijayandem.github.io.git"
+  },
+  "author": "Vijay Andem",
+  "license": "MIT"
+}
