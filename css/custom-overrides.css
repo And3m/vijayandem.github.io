@@ -1,0 +1,72 @@
+/* Custom highlight override for Vijay K Andem Portfolio */
+.text-highlight {
+  color: #ffbd39 !important;
+}
+
+/* Navbar fancy link styles */
+.nav-fancy {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: 0.02em;
+  transition: color 0.18s;
+  position: relative;
+}
+.nav-fancy:hover, .nav-fancy.active {
+  color: #ffbd39 !important;
+}
+.nav-fancy::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffbd39;
+  transition: width 0.2s;
+  margin: 0 auto 0.1em auto;
+}
+.nav-fancy:hover::after, .nav-fancy.active::after {
+  width: 80%;
+}
+
+/* Responsive row for Contact section question/button */
+.contact-question-row .col-md-7 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contact-question-row .col-md-5 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contact-question-row .btn {
+  font-size: 0.95rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: 0.5rem;
+  min-width: 90px;
+  width: auto;
+  line-height: 1.2;
+}
+.contact-question-row {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.2rem !important;
+}
+.contact-findme {
+  color: #fff !important;
+}
+@media (max-width: 767.98px) {
+  .contact-question-row .col-md-7,
+  .contact-question-row .col-md-5 {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .contact-question-row .col-md-5 {
+    margin-top: 0.3rem;
+  }
+  .contact-question-row .btn {
+    width: 100%;
+    min-width: 0;
+    font-size: 1rem;
+    padding: 0.45rem 1rem;
+  }
+} 

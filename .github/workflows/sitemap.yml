@@ -1,0 +1,27 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm install
+        continue-on-error: true
+      - name: Generate sitemap.xml
+        run: node generate-sitemap.js
+      - name: Commit and push sitemap.xml
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m 'chore: update sitemap.xml [auto]' || echo 'No changes to commit'
+          git push 

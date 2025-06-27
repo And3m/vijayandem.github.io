@@ -9,394 +9,477 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="Vijay K Andem">
   <link rel="icon" href="images/about-me.jpg" type="image/jpeg">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Preload Google Font for performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- Modern Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS (keep your style.css for overrides) -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom Overrides CSS -->
+  <link rel="stylesheet" href="css/custom-overrides.css">
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="Vijay Andem, Data Analyst, Business Intelligence, Power BI, Tableau, Streamlit, Portfolio, Analytics, Python, SQL, Dashboard, Resume, Projects, Bengaluru, India">
+  <meta property="og:title" content="Vijay K Andem Portfolio | Data Analyst & BI Professional">
+  <meta property="og:description" content="Explore the portfolio, projects, and experience of Vijay K Andem, a Data Analyst & Business Intelligence Professional based in Bengaluru, India.">
+  <meta property="og:image" content="https://and3m.github.io/Portfolio/images/about-me.jpg">
+  <meta property="og:url" content="https://and3m.github.io/Portfolio/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vijay K Andem Portfolio | Data Analyst & BI Professional">
+  <meta name="twitter:description" content="Explore the portfolio, projects, and experience of Vijay K Andem, a Data Analyst & Business Intelligence Professional based in Bengaluru, India.">
+  <meta name="twitter:image" content="https://and3m.github.io/Portfolio/images/about-me.jpg">
+  <!-- Copyright © 2024 Vijay K Andem. All rights reserved. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vijay K Andem",
+    "url": "https://and3m.github.io/Portfolio/",
+    "sameAs": [
+      "https://www.linkedin.com/in/vijay-andem-b2092223/",
+      "https://github.com/And3m"
+    ],
+    "jobTitle": "Data Analyst & Business Intelligence Professional",
+    "image": "https://and3m.github.io/Portfolio/images/about-me.jpg"
+  }
+  </script>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
   <div class="scroll-progress" aria-hidden="true"></div>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar" aria-label="Main Navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="ftco-navbar" aria-label="Main Navigation" data-bs-spy="scroll" data-bs-target="#ftco-navbar" data-bs-offset="80">
     <div class="container">
-      <a class="navbar-brand" href="index.html" aria-label="Vijay K Andem Home">Vijay K Andem</a>
-      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#home-section" style="color:#ffbd39; font-family: 'Inter', sans-serif;">
+        <span style="font-size: 1.7rem; line-height: 1; display: flex; align-items: center;">
+          <i class="bi bi-bar-chart-fill" style="color:#ffbd39;"></i>
+        </span>
+        Vijay K Andem
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2" style="font-family: 'Inter', sans-serif; font-weight: 700;">
+          <li class="nav-item"><a href="#home-section" class="nav-link nav-fancy">Home</a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link nav-fancy">About</a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link nav-fancy">Resume</a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link nav-fancy">Projects</a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link nav-fancy">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <main id="main-content">
-    <section id="home-section" class="hero" aria-label="Hero Section">
+    <section id="home-section" class="hero hero-trendy-bg section-animate pt-5 section-spacing" aria-label="Hero Section">
       <div class="container">
-        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" style="min-height:480px;" data-scrollax-parent="true">
-          <div class="col-12 d-flex align-items-center justify-content-center flex-column flex-md-row">
-            <div class="hero-photo mb-4 mb-md-0 mr-md-4 d-flex align-items-center justify-content-center" style="flex-shrink:0; background:none; box-shadow:none; width:220px; height:220px;">
-              <img src="images/about-me.jpg" alt="Vijay Andem profile photo" style="width:200px; height:200px; border-radius:50%; border:4px solid #ffbd39; object-fit:cover; display:block; background:none; box-shadow:0 2px 16px #0006;" loading="lazy">
-            </div>
-            <div class="text w-100 text-center text-md-left fade-up" style="background:rgba(24,23,23,0.92); border-radius:24px; box-shadow:0 4px 32px #0003; padding:44px 32px 40px 32px; max-width:600px; margin:0 auto; color:#fff;">
-              <span class="subheading" style="color:#ffbd39; font-size:1.2rem; font-weight:600; letter-spacing:0.04em;">Hello!</span>
-              <h1 class="mb-4 mt-3" style="color:#fff; font-size:2.2rem; font-weight:800;">I'm <span style="color:#ffbd39;">Vijay K Andem</span></h1>
-              <h2 class="mb-4" style="color:#fff; font-size:1.15rem; font-weight:500;">🚀 Data Analyst | Business Intelligence Professional | Insight Creator</h2>
-              <span id="typing-animation" style="background:#222; color:#ffbd39; border-radius:8px; padding:6px 18px; font-size:1.1rem; font-weight:600; display:inline-block; margin-bottom:12px;"></span>
-              <br><br>
-              <p>
-                <a href="https://www.linkedin.com/in/vijay-andem-b2092223/" class="btn btn-primary py-3 px-4" style="margin-right:8px;" rel="noopener" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
-                <a href="https://github.com/And3m" class="btn btn-white btn-outline-white py-3 px-4" rel="noopener" target="_blank" aria-label="GitHub Profile">GitHub</a>
-              </p>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="hero-glass-card text-center">
+              <div class="mx-auto mb-3 hero-photo" style="width: 180px; height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="images/about-me.jpg" alt="Vijay Andem profile photo" class="rounded-circle img-fluid border border-4 border-warning shadow" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+              </div>
+              <span class="d-block text-warning fw-semibold mb-2" style="font-size: 1.1rem;">Hello!</span>
+              <h1 class="fw-bold mb-2 text-white" style="font-size: 2.2rem;">I'm <span class="text-warning">Vijay K Andem</span></h1>
+              <h2 class="mb-3 hero-role" style="font-size: 1.15rem; font-weight: 500; color: #fff;">🚀 Data Analyst | Business Intelligence Professional | Insight Creator</h2>
+              <div class="mb-4">
+                <span id="typing-animation" class="bg-dark bg-opacity-75 text-warning rounded px-3 py-2 fw-semibold d-inline-block" style="font-size: 1.1rem;"></span>
+              </div>
+              <div class="d-flex justify-content-center gap-3">
+                <a href="https://www.linkedin.com/in/vijay-andem-b2092223/" class="btn btn-warning text-dark fw-bold px-4 py-2" rel="noopener" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/And3m" class="btn btn-outline-light fw-bold px-4 py-2" rel="noopener" target="_blank" aria-label="GitHub Profile">GitHub</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section" style="background: linear-gradient(120deg, #181717 60%, #ffbd39 100%); border-radius: 20px; box-shadow: 0 4px 32px #0003; margin-bottom: 28px; padding: 32px 0 18px 0;">
+    <section class="ftco-about ftco-section py-5 hero-trendy-bg section-animate section-spacing" id="about-section">
       <div class="container">
-        <div class="row d-flex align-items-center justify-content-center">
-          <div class="col-12 col-md-10 col-lg-9 d-flex align-items-center justify-content-center">
-            <div class="w-100 fade-up" style="color: #fff;">
-              <h2 class="mb-2" style="color: #fff; font-size: 2rem; font-weight: 700;">About Me</h2>
-              <ul class="about-bullets" style="list-style: disc inside; color: #fff; font-size: 1.08rem; margin-bottom: 18px; padding-left: 0;">
-                <li style="margin-bottom: 8px;">Data Analyst with expertise in transforming complex datasets into compelling visual stories.</li>
-                <li style="margin-bottom: 8px;">BI Professional specializing in Power BI, Tableau, and Streamlit dashboard development.</li>
-                <li style="margin-bottom: 8px;">Problem Solver bridging technical data analysis and strategic business insights.</li>
-                <li style="margin-bottom: 8px;">Continuous Learner in advanced analytics and machine learning.</li>
-                <li style="margin-bottom: 8px;">Strategic Thinker driving data-driven decision making.</li>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="hero-glass-card text-center text-white mb-4">
+              <h2 class="fw-bold mb-3" style="font-size: 2rem; color: #fff;">About Me</h2>
+              <ul class="list-unstyled mb-4">
+                <li class="mb-2"><i class="bi bi-bar-chart-fill" style="color:#ffbd39;"></i> Data Analyst with expertise in transforming complex datasets into compelling visual stories.</li>
+                <li class="mb-2"><i class="bi bi-pie-chart-fill" style="color:#ffbd39;"></i> BI Professional specializing in Power BI, Tableau, and Streamlit dashboard development.</li>
+                <li class="mb-2"><i class="bi bi-lightbulb-fill" style="color:#ffbd39;"></i> Problem Solver bridging technical data analysis and strategic business insights.</li>
+                <li class="mb-2"><i class="bi bi-graph-up-arrow" style="color:#ffbd39;"></i> Continuous Learner in advanced analytics and machine learning.</li>
+                <li class="mb-2"><i class="bi bi-gear-fill" style="color:#ffbd39;"></i> Strategic Thinker driving data-driven decision making.</li>
               </ul>
-              <ul class="about-info mt-2 px-2" style="background: rgba(34,34,34,0.85); border-radius: 10px; padding: 10px 14px 6px 14px; color: #fff; font-size: 0.98rem; margin-top: 24px;">
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Profile:</span> <span>Data Science & Analytics</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Domain:</span> <span>Pharma, Co-Marketing, Ecommerce, FMCG & Digital Marketing</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Education:</span> <span>Bachelor of Science</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Language:</span> <span>English, Telugu, Hindi, Kannada</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">BI Tools:</span> <span>Microsoft Power BI, Looker & Tableau</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics & SEO</span></li>
-                <li class="d-flex" style="color: #fff;"><span style="min-width: 100px; color: #ffbd39; font-weight: 600;">Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
-              </ul>
-              <div class="row">
-                <div class="col-12 d-flex flex-column align-items-center justify-content-center" style="margin-top: 32px;">
-                  <div class="projects-completed-card" style="background: rgba(34,34,34,0.85); border-radius: 14px; padding: 18px 20px 14px 20px; min-width: 210px; box-shadow: 0 2px 12px #0002; text-align: center;">
-                    <span class="number" data-number="30" style="color: #ffbd39; font-size: 2.1rem; font-weight: 800; vertical-align: middle;">30</span>
-                    <span style="color: #ffbd39; font-size: 1.3rem; font-weight: 700; vertical-align: middle;">+</span>
-                    <span style="font-size: 1.08rem; color: #fff; vertical-align: middle;">&nbsp;Projects completed</span>
-                    <br>
-                    <a href="https://github.com/And3m?tab=repositories" class="btn btn-primary py-2 px-3 mt-2" style="font-size: 0.98rem;">View My GitHub</a>
+              <div class="about-info-box bg-dark bg-opacity-75 rounded p-4 border border-warning text-white mb-4 mx-auto w-100" style="max-width: 650px; text-align: left;">
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-person-badge" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Profile:</span> <span>Data Science & Analytics</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-building" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Domain:</span> <span>Pharma, Co-Marketing, Ecommerce, FMCG & Digital Marketing</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-mortarboard" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Education:</span> <span>Bachelor of Science</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-translate" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Language:</span> <span>English, Telugu, Hindi, Kannada</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-bar-chart-steps" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">BI Tools:</span> <span>Microsoft Power BI, Looker & Tableau</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-tools" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics & SEO</span>
+                </div>
+                <div class="d-flex align-items-center mb-2" style="gap:0.5rem;">
+                  <i class="bi bi-globe-americas" style="color:#ffbd39;"></i>
+                  <span class="fw-semibold text-warning me-2">Interest:</span> <span>Traveling, Travel Photography, Teaching</span>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <div class="d-inline-block bg-dark bg-opacity-75 rounded p-3 border border-warning">
+                  <span class="display-6 fw-bold text-warning">30+</span>
+                  <span class="fs-5 text-white">Projects completed</span>
+                  <br>
+                  <a href="https://github.com/And3m?tab=repositories" class="btn btn-warning mt-2 fw-bold">View My GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ftco-section py-5 hero-trendy-bg section-animate section-spacing" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-4">
+          <div class="col-md-10 text-center">
+            <h1 class="display-5 fw-bold mb-1" style="color: #fff;">Resume</h1>
+            <h2 class="mb-3 section-subtitle" style="color: #ffbd39;">Professional Experience & Education</h2>
+            <p class="lead" style="color: #fff;">Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <!-- Timeline Experience -->
+            <div class="resume-timeline position-relative py-4">
+              <!-- Timeline line -->
+              <div class="timeline-line position-absolute top-0 start-50 translate-middle-x h-100"></div>
+              <!-- Timeline Items (latest first) -->
+              <div class="timeline-item mb-5 position-relative">
+                <div class="hero-glass-card text-white timeline-card ms-lg-5">
+                  <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">Jan 2024 – May 2025</span>
+                  <h5 class="mb-1 hero-role" style="color: #ffbd39;">Career Transition – Strategic Planning & Independent Exploration</h5>
+                  <div class="text-white-50 mb-2" style="color: #fff;">Remote</div>
+                  <ul class="mb-0">
+                    <li>Undertook a planned career transition to explore entrepreneurial opportunities in data and analytics consulting.</li>
+                    <li>Strategic skill enhancement, market research, and development of AI-integrated proof-of-concept solutions using LangChain, PandasAI, Streamlit, ChatGPT plugins, and OpenAI APIs.</li>
+                    <li>Conducted research into AI-driven analytics trends, including LLMs and automation in BI.</li>
+                    <li>Prototyped data products and contributed to open-source using Python, Streamlit, and analytics-focused AI tools.</li>
+                  </ul>
+                </div>
+                <div class="timeline-dot bg-warning position-absolute start-50 translate-middle-x"></div>
+              </div>
+              <div class="timeline-item mb-5 position-relative">
+                <div class="hero-glass-card text-white timeline-card ms-lg-5">
+                  <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">Mar 2022 – Dec 2023</span>
+                  <h5 class="mb-1 hero-role" style="color: #ffbd39;">Business Analyst</h5>
+                  <div class="text-white-50 mb-2" style="color: #fff;">Cavinkare Pvt Ltd</div>
+                  <ul class="mb-0">
+                    <li>Conducted data-driven market research and customer behavior analysis using Neilsen/Kantar.</li>
+                    <li>Delivered predictive insights to C-suite for marketing strategy and campaign effectiveness.</li>
+                    <li>Collaborated cross-functionally to execute marketing plans based on analytics and KPIs.</li>
+                    <li>Led performance tracking, budget analysis, and reporting through automated dashboards (Power BI).</li>
+                  </ul>
+                </div>
+                <div class="timeline-dot bg-warning position-absolute start-50 translate-middle-x"></div>
+              </div>
+              <div class="timeline-item mb-5 position-relative">
+                <div class="hero-glass-card text-white timeline-card ms-lg-5">
+                  <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">Jul 2016 – Mar 2022</span>
+                  <h5 class="mb-1 hero-role" style="color: #ffbd39;">Marketing Analyst</h5>
+                  <div class="text-white-50 mb-2" style="color: #fff;">IBM India Pvt Ltd</div>
+                  <ul class="mb-0">
+                    <li>Designed and automated global marketing dashboards for performance and revenue pipeline analysis.</li>
+                    <li>Provided strategic marketing recommendations using SQL, Python, and visualization tools.</li>
+                    <li>Researched competitive strategy and built insights dashboards for global leaders.</li>
+                    <li>Drove process optimization and operational efficiency through analytics and automation.</li>
+                  </ul>
+                </div>
+                <div class="timeline-dot bg-warning position-absolute start-50 translate-middle-x"></div>
+              </div>
+              <div class="timeline-item mb-5 position-relative">
+                <div class="hero-glass-card text-white timeline-card ms-lg-5">
+                  <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">Aug 2015 – May 2016</span>
+                  <h5 class="mb-1 hero-role" style="color: #ffbd39;">Reporting Analyst</h5>
+                  <div class="text-white-50 mb-2" style="color: #fff;">Indegene Life Systems Pvt Ltd</div>
+                  <ul class="mb-0">
+                    <li>Delivered automated marketing and sales performance reports using data mining and visualization.</li>
+                    <li>Created dashboards and answered ad-hoc business queries by analyzing large datasets.</li>
+                    <li>Supported consulting initiatives by identifying customer insights and improving data presentation.</li>
+                  </ul>
+                </div>
+                <div class="timeline-dot bg-warning position-absolute start-50 translate-middle-x"></div>
+              </div>
+              <div class="timeline-item mb-5 position-relative">
+                <div class="hero-glass-card text-white timeline-card ms-lg-5">
+                  <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">Mar 2011 – Aug 2015</span>
+                  <h5 class="mb-1 hero-role" style="color: #ffbd39;">Data Analyst</h5>
+                  <div class="text-white-50 mb-2" style="color: #fff;">Infosys Ltd</div>
+                  <ul class="mb-0">
+                    <li>Developed and automated reports/dashboards using Excel, SQL, VBA, and MS Access for tax processing insights.</li>
+                    <li>Translated business requirements into reporting solutions for decision-making and improvements.</li>
+                  </ul>
+                </div>
+                <div class="timeline-dot bg-warning position-absolute start-50 translate-middle-x"></div>
+              </div>
+            </div>
+            <!-- Education Section -->
+            <div class="mt-5">
+              <h3 class="fw-bold text-warning mb-3 text-center" style="color: #fff;">Education</h3>
+              <div class="education-row" style="display:flex;flex-direction:row;justify-content:center;align-items:stretch;gap:3rem;max-width:850px;margin:0 auto;padding:0;">
+                <div class="education-tile" style="flex:1 1 340px;max-width:380px;min-width:260px;display:flex;align-items:stretch;margin:0;">
+                  <div class="hero-glass-card text-white">
+                    <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">2005</span>
+                    <h5 class="mb-1">Bachelor of Science</h5>
+                    <div class="text-white-50 mb-2" style="color: #fff;">Kakatiya University</div>
+                    <div>Maths, Statistics, Computer Science</div>
+                  </div>
+                </div>
+                <div class="education-tile" style="flex:1 1 340px;max-width:380px;min-width:260px;display:flex;align-items:stretch;margin:0;">
+                  <div class="hero-glass-card text-white">
+                    <span class="badge bg-warning text-dark mb-2" style="background: #ffbd39; color: #232526;">2001</span>
+                    <h5 class="mb-1">Higher Secondary School</h5>
+                    <div class="text-white-50 mb-2" style="color: #fff;">Board of Intermediate</div>
                   </div>
                 </div>
               </div>
+              <style>
+                @media (max-width: 991.98px) {
+                  .education-row {
+                    flex-direction: column !important;
+                    gap: 1.2rem !important;
+                    align-items: center !important;
+                    max-width: 100% !important;
+                  }
+                  .education-tile {
+                    max-width: 100% !important;
+                    min-width: 0 !important;
+                  }
+                }
+              </style>
+              <div class="text-center mt-4">
+                <a href="https://drive.google.com/file/d/1C3CGrvTOeNmDhNa5Xj0fCeTDri5_UncE/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-warning fw-bold px-4 py-2">Download CV</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <section class="ftco-section py-5 hero-trendy-bg section-animate section-spacing" id="project-section">
       <div class="container">
-        <div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate fade-up">
-              <h1 class="big big-2">Resume</h1>
-              <h2 class="mb-4">Resume</h2>
-              <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
-            </div>
-          </div>
-          <div class="row">
-            <h1 class="big-4">Experience</h1>
-            <div class="underline"></div>
-          </div>
-          <br>
-          <div class="timeline" id="experience-timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Jan 2024 – May 2025</span>
-                <div class="timeline-role">Career Transition – Strategic Planning & Independent Exploration</div>
-                <div class="timeline-company">Remote</div>
-                <ul>
-                  <li>Undertook a planned career transition to explore entrepreneurial opportunities in data and analytics consulting.</li>
-                  <li>Strategic skill enhancement, market research, and development of AI-integrated proof-of-concept solutions using LangChain, PandasAI, Streamlit, ChatGPT plugins, and OpenAI APIs.</li>
-                  <li>Conducted research into AI-driven analytics trends, including LLMs and automation in BI.</li>
-                  <li>Prototyped data products and contributed to open-source using Python, Streamlit, and analytics-focused AI tools.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Mar 2022 – Dec 2023</span>
-                <div class="timeline-role">Business Analyst</div>
-                <div class="timeline-company">Cavinkare Pvt Ltd</div>
-                <ul>
-                  <li>Conducted data-driven market research and customer behavior analysis using Neilsen/Kantar.</li>
-                  <li>Delivered predictive insights to C-suite for marketing strategy and campaign effectiveness.</li>
-                  <li>Collaborated cross-functionally to execute marketing plans based on analytics and KPIs.</li>
-                  <li>Led performance tracking, budget analysis, and reporting through automated dashboards (Power BI).</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Jul 2016 – Mar 2022</span>
-                <div class="timeline-role">Marketing Analyst</div>
-                <div class="timeline-company">IBM India Pvt Ltd</div>
-                <ul>
-                  <li>Designed and automated global marketing dashboards for performance and revenue pipeline analysis.</li>
-                  <li>Provided strategic marketing recommendations using SQL, Python, and visualization tools.</li>
-                  <li>Researched competitive strategy and built insights dashboards for global leaders.</li>
-                  <li>Drove process optimization and operational efficiency through analytics and automation.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Aug 2015 – May 2016</span>
-                <div class="timeline-role">Reporting Analyst</div>
-                <div class="timeline-company">Indegene Life Systems Pvt Ltd</div>
-                <ul>
-                  <li>Delivered automated marketing and sales performance reports using data mining and visualization.</li>
-                  <li>Created dashboards and answered ad-hoc business queries by analyzing large datasets.</li>
-                  <li>Supported consulting initiatives by identifying customer insights and improving data presentation.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-date">Mar 2011 – Aug 2015</span>
-                <div class="timeline-role">Data Analyst</div>
-                <div class="timeline-company">Infosys Ltd</div>
-                <ul>
-                  <li>Developed and automated reports/dashboards using Excel, SQL, VBA, and MS Access for tax processing insights.</li>
-                  <li>Translated business requirements into reporting solutions for decision-making and improvements.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row">
-            <h1 class="big-4">Education</h1>
-            <div class="underline"></div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-md-6 d-flex align-items-stretch">
-              <div class="resume-wrap ftco-animate w-100">
-                <span class="date">2005</span>
-                <h2>Bachelor of Science</h2>
-                <span class="position">Kakatiya University</span>
-                <div class="degree-specialization mt-2">
-                  Maths, Statistics, Computer Science
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-stretch">
-              <div class="resume-wrap ftco-animate w-100">
-                <span class="date">2001</span>
-                <h2>Higher Secondary School</h2>
-                <span class="position">Board of Intermediate</span>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-5">
-            <div class="col-md-6 text-center ftco-animate">
-              <p><a href="https://drive.google.com/file/d/1C3CGrvTOeNmDhNa5Xj0fCeTDri5_UncE/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary py-4 px-5">Download CV</a></p>
-            </div>
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 text-center">
+            <h1 class="display-6 fw-bold mb-1" style="color: #fff;">Featured Projects</h1>
+            <h2 class="mb-3 section-subtitle" style="color: #ffbd39;">Portfolio Highlights</h2>
+            <div class="mx-auto mb-3" style="width: 60px; height: 4px; background: #ffbd39; border-radius: 2px;"></div>
           </div>
         </div>
-      </section>
-      <section class="ftco-section" id="project-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-5">
-            <div class="col-md-7 heading-section text-center ftco-animate fade-up">
-              <h1 class="big big-2">Featured Projects</h1>
-              <h2 class="mb-4">Featured Projects</h2>
-              <div class="underline" style="margin: 0 auto 18px auto;"></div>
-            </div>
-          </div>
-          <div class="row d-flex">
-            <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-              <div class="blog-entry justify-content-end shadow-lg rounded">
-                <a href="https://github.com/And3m/Coffee-Shop-Sales-Analysis-Dashboard-Streamlit-Pandas-Plotly" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');"></a>
-                <div class="text mt-3 float-right d-block">
-                  <h3 class="heading"><a href="https://github.com/And3m/Coffee-Shop-Sales-Analysis-Dashboard-Streamlit-Pandas-Plotly">Coffee Shop Sales Dashboard</a></h3>
-                  <p>Interactive Streamlit dashboard for real-time sales analytics. KPIs, advanced analytics, and modern Plotly visualizations. <br><b>Tech:</b> Streamlit, Pandas, Plotly, Python</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-              <div class="blog-entry justify-content-end shadow-lg rounded">
-                <a href="https://github.com/And3m/Restaurant-Ratings-Analysis-PowerBI" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');"></a>
-                <div class="text mt-3 float-right d-block">
-                  <h3 class="heading"><a href="https://github.com/And3m/Restaurant-Ratings-Analysis-PowerBI">Restaurant Ratings Analysis</a></h3>
-                  <p>Power BI dashboard analyzing restaurant ratings, consumer behavior, and trends in Mexico. <br><b>Tech:</b> Power BI, DAX, Power Query, Excel</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-              <div class="blog-entry justify-content-end shadow-lg rounded">
-                <a href="https://github.com/And3m/HR-Dashboard-Tableau" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');"></a>
-                <div class="text mt-3 float-right d-block">
-                  <h3 class="heading"><a href="https://github.com/And3m/HR-Dashboard-Tableau">HR Dashboard Analytics</a></h3>
-                  <p>Comprehensive HR analytics dashboard in Tableau, with workforce insights and key HR trends. <br><b>Tech:</b> Tableau, Data Preprocessing, HR Analytics</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-              <div class="blog-entry justify-content-end shadow-lg rounded">
-                <a href="https://github.com/And3m/superstore-sales-analysis-eda" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');"></a>
-                <div class="text mt-3 float-right d-block">
-                  <h3 class="heading"><a href="https://github.com/And3m/superstore-sales-analysis-eda">Superstore Sales Analysis</a></h3>
-                  <p>Comprehensive EDA of sales data, customer segmentation, and sales trend forecasting.<br><b>Tech:</b> Python, Pandas, Matplotlib, Seaborn</p>
-                </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="hero-glass-card h-100 text-white">
+              <a href="https://github.com/And3m/Coffee-Shop-Sales-Analysis-Dashboard-Streamlit-Pandas-Plotly" target="_blank" rel="noopener" class="d-block">
+                <img src="images/proj_1.jpg" class="card-img-top rounded-3 mb-3" alt="Coffee Shop Sales Dashboard project screenshot" loading="lazy">
+              </a>
+              <div class="card-body p-0">
+                <h5 class="card-title"><a href="https://github.com/And3m/Coffee-Shop-Sales-Analysis-Dashboard-Streamlit-Pandas-Plotly" target="_blank" rel="noopener" class="text-highlight" style="color: #ffbd39;">Coffee Shop Sales Dashboard</a></h5>
+                <p class="card-text" style="color: #fff;">Interactive Streamlit dashboard for real-time sales analytics. KPIs, advanced analytics, and modern Plotly visualizations.<br><b>Tech:</b> Streamlit, Pandas, Plotly, Python</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="display:none;"></section>
-      <section class="ftco-section ftco-no-pb" id="contact-section">
-        <div class="container">
-          <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate fade-up">
-              <h1 class="big big-2">Contact</h1>
-              <h2 class="mb-4">Contact Me</h2>
-              <p>Below are the details to reach out to me!</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="hero-glass-card h-100 text-white">
+              <a href="https://github.com/And3m/Restaurant-Ratings-Analysis-PowerBI" target="_blank" rel="noopener" class="d-block">
+                <img src="images/proj_2.jpg" class="card-img-top rounded-3 mb-3" alt="Restaurant Ratings Analysis project screenshot" loading="lazy">
+              </a>
+              <div class="card-body p-0">
+                <h5 class="card-title"><a href="https://github.com/And3m/Restaurant-Ratings-Analysis-PowerBI" target="_blank" rel="noopener" class="text-highlight" style="color: #ffbd39;">Restaurant Ratings Analysis</a></h5>
+                <p class="card-text" style="color: #fff;">Power BI dashboard analyzing restaurant ratings, consumer behavior, and trends in Mexico.<br><b>Tech:</b> Power BI, DAX, Power Query, Excel</p>
+              </div>
             </div>
           </div>
-          <div class="row d-flex contact-info mb-5">
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-              <div class="align-self-stretch box p-3 text-center contact-tile-min">
-                <div class="icon d-flex align-items-center justify-content-center contact-icon-min">
-                  <span class="icon-map-signs"></span>
-                </div>
-                <h3 class="mb-3">Address</h3>
-                <p style="font-size:0.97rem;">Bengaluru, India</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="hero-glass-card h-100 text-white">
+              <a href="https://github.com/And3m/HR-Dashboard-Tableau" target="_blank" rel="noopener" class="d-block">
+                <img src="images/proj_3.jpg" class="card-img-top rounded-3 mb-3" alt="HR Dashboard Analytics project screenshot" loading="lazy">
+              </a>
+              <div class="card-body p-0">
+                <h5 class="card-title"><a href="https://github.com/And3m/HR-Dashboard-Tableau" target="_blank" rel="noopener" class="text-highlight" style="color: #ffbd39;">HR Dashboard Analytics</a></h5>
+                <p class="card-text" style="color: #fff;">Comprehensive HR analytics dashboard in Tableau, with workforce insights and key HR trends.<br><b>Tech:</b> Tableau, Data Preprocessing, HR Analytics</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-              <div class="align-self-stretch box p-3 text-center contact-tile-min">
-                <div class="icon d-flex align-items-center justify-content-center contact-icon-min">
-                  <span class="icon-phone2"></span>
-                </div>
-                <h3 class="mb-3">Contact Number</h3>
-                <p style="font-size:0.97rem;"><a href="tel:+918919094229">+91-8919094229</a></p>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="hero-glass-card h-100 text-white">
+              <a href="https://github.com/And3m/superstore-sales-analysis-eda" target="_blank" rel="noopener" class="d-block">
+                <img src="images/proj_4.jpg" class="card-img-top rounded-3 mb-3" alt="Superstore Sales Analysis project screenshot" loading="lazy">
+              </a>
+              <div class="card-body p-0">
+                <h5 class="card-title"><a href="https://github.com/And3m/superstore-sales-analysis-eda" target="_blank" rel="noopener" class="text-highlight" style="color: #ffbd39;">Superstore Sales Analysis</a></h5>
+                <p class="card-text" style="color: #fff;">Comprehensive EDA of sales data, customer segmentation, and sales trend forecasting.<br><b>Tech:</b> Python, Pandas, Matplotlib, Seaborn</p>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-              <div class="align-self-stretch box p-3 text-center contact-tile-min">
-                <div class="icon d-flex align-items-center justify-content-center contact-icon-min">
-                  <span class="icon-paper-plane"></span>
-                </div>
-                <h3 class="mb-3">Email Address</h3>
-                <p style="font-size:0.97rem;"><a href="mailto:vijayandem@gmail.com">vijayandem@gmail.com</a></p>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-              <div class="align-self-stretch box p-3 text-center contact-tile-min">
-                <div class="icon d-flex align-items-center justify-content-center contact-icon-min">
-                  <span class="icon-globe"></span>
-                </div>
-                <h3 class="mb-3">Download Resume</h3>
-                <p style="font-size:0.97rem;"><a href="https://drive.google.com/file/d/1C3CGrvTOeNmDhNa5Xj0fCeTDri5_UncE/view?usp=sharing" target="_blank" rel="noopener">resumelink</a></p>
-              </div>
-            </div>
-            <div class="container">
-              <br>
-              <br>
-              <div class="row justify-content-center">
-                <div class="col-md-7 ftco-animate text-center">
-                  <h2>Have a<span> Question? </span>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKJMSbAwHRGjoV6JdOrQTy94Ghzfojz-Qrw_RxE9HbuwFZ0w/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-primary py-3 px-5">Click Here</a>
-                  </h2>
-                </div>
-              </div>
-              <br>
-              <div class="find-me-pill">
-                <span class="normal-txt">Find me on</span>
-                <ul class="ftco-footer-social list-unstyled d-flex mb-0">
-                  <li class="ftco-animate">
-                    <a href="https://github.com/And3m" target="_blank" title="GitHub">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="12" fill="#181717"/>
-                        <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.49 2.87 8.3 6.84 9.64.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z" fill="#fff"/>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="ftco-animate">
-                    <a href="https://x.com/vjandem" target="_blank" title="X (Twitter)">
-                      <svg width="28" height="28" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="600" cy="613.5" r="600" fill="#000"/>
-                        <path d="M1199.61 21.5H977.13L600.01 505.13L222.87 21.5H0.39L489.13 637.13L0 1205.5H222.87L600.01 721.87L977.13 1205.5H1199.6L710.87 589.87L1199.61 21.5ZM900.13 1102.5L600.01 713.13L299.87 1102.5H900.13ZM299.87 124.5L600.01 513.87L900.13 124.5H299.87Z" fill="#fff"/>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="ftco-animate">
-                    <a href="https://www.linkedin.com/in/vijay-andem-b2092223" target="_blank" title="LinkedIn">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="12" fill="#0077B5"/>
-                        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62z" fill="#fff"/>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="ftco-animate">
-                    <a href="https://www.instagram.com/vijayandem/" target="_blank" title="Instagram">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="12" fill="url(#insta-gradient-footer)"/>
-                        <defs>
-                          <radialGradient id="insta-gradient-footer" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                            <stop offset="0%" stop-color="#f9ce34"/>
-                            <stop offset="50%" stop-color="#ee2a7b"/>
-                            <stop offset="100%" stop-color="#6228d7"/>
-                          </radialGradient>
-                        </defs>
-                        <path d="M12 7.2A4.8 4.8 0 1 0 12 16.8A4.8 4.8 0 1 0 12 7.2Z" fill="#fff"/>
-                        <circle cx="17.5" cy="6.5" r="1.5" fill="#fff"/>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <br>
-           </div>
-         </div>
-       </section>
-    </main>
-    <footer class="ftco-footer ftco-section" aria-label="Footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>Copyright &copy;<span id="year"></span> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a></p>
           </div>
         </div>
       </div>
-    </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    </section>
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="display:none;"></section>
+    <section class="ftco-section py-5 hero-trendy-bg section-animate section-spacing" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 text-center">
+            <h1 class="display-6 fw-bold mb-1" style="color: #fff;">Contact</h1>
+            <p class="lead" style="color: #fff;">Below are the details to reach out to me!</p>
+          </div>
+        </div>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="hero-glass-card border-0 text-center h-100 text-white">
+              <div class="card-body">
+                <div class="mb-2"><i class="bi bi-geo-alt-fill text-warning fs-2"></i></div>
+                <h5 class="card-title mb-2" style="color: #fff;">Address</h5>
+                <p class="card-text text-highlight">Bengaluru, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="hero-glass-card border-0 text-center h-100 text-white">
+              <div class="card-body">
+                <div class="mb-2"><i class="bi bi-telephone-fill text-warning fs-2"></i></div>
+                <h5 class="card-title mb-2" style="color: #fff;">Contact Number</h5>
+                <p class="card-text"><a href="tel:+918919094229" class="text-highlight" style="color: #ffbd39;">+91-8919094229</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="hero-glass-card border-0 text-center h-100 text-white">
+              <div class="card-body">
+                <div class="mb-2"><i class="bi bi-envelope-fill text-warning fs-2"></i></div>
+                <h5 class="card-title mb-2" style="color: #fff;">Email Address</h5>
+                <p class="card-text"><a href="mailto:vijayandem@gmail.com" class="text-highlight" style="color: #ffbd39;">vijayandem@gmail.com</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="hero-glass-card border-0 text-center h-100 text-white">
+              <div class="card-body">
+                <div class="mb-2"><i class="bi bi-download text-warning fs-2"></i></div>
+                <h5 class="card-title mb-2" style="color: #fff;">Download Resume</h5>
+                <p class="card-text"><a href="https://drive.google.com/file/d/1C3CGrvTOeNmDhNa5Xj0fCeTDri5_UncE/view?usp=sharing" target="_blank" rel="noopener" class="text-highlight" style="color: #ffbd39;">Resume Link</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-8">
+            <div class="row align-items-center g-1 contact-question-row flex-nowrap">
+              <div class="col-12 col-md-7 text-center text-md-end">
+                <h2 class="mb-0" style="color: #fff; font-size: 1.3rem; font-weight: 600;">
+                  Have a <span class="text-highlight">Question?</span>
+                </h2>
+              </div>
+              <div class="col-12 col-md-5 text-center text-md-start mt-2 mt-md-0">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKJMSbAwHRGjoV6JdOrQTy94Ghzfojz-Qrw_RxE9HbuwFZ0w/viewform?usp=preview" target="_blank" rel="noopener" class="btn btn-warning fw-bold px-3 py-1">Click Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <div class="mb-2 text-white">Find me on</div>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://github.com/And3m" target="_blank" title="GitHub" class="text-warning fs-3"><i class="bi bi-github"></i></a>
+              <a href="https://x.com/vjandem" target="_blank" title="X (Twitter)" class="text-warning fs-3"><i class="bi bi-twitter-x"></i></a>
+              <a href="https://www.linkedin.com/in/vijay-andem-b2092223" target="_blank" title="LinkedIn" class="text-warning fs-3"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.instagram.com/vijayandem/" target="_blank" title="Instagram" class="text-warning fs-3"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="ftco-footer ftco-section" aria-label="Footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0 text-white-50">&copy; <span id="year"></span> Vijay K Andem. Portfolio crafted and designed by Vijay K Andem. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // Typing animation for hero section (reference: github.com/And3m)
+    document.addEventListener('DOMContentLoaded', function() {
+      var phrases = [
+        'Turning data into stories, one visualization at a time.',
+        'Power BI | Tableau | Streamlit | Python | SQL',
+        'Let\'s connect and create insights together!'
+      ];
+      var el = document.getElementById('typing-animation');
+      var phraseIndex = 0, charIndex = 0, isDeleting = false, delay = 80, pause = 1200;
+      function type() {
+        var current = phrases[phraseIndex];
+        if (isDeleting) {
+          charIndex--;
+        } else {
+          charIndex++;
+        }
+        el.textContent = current.substring(0, charIndex);
+        if (!isDeleting && charIndex === current.length) {
+          isDeleting = true;
+          setTimeout(type, pause);
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(type, 400);
+        } else {
+          setTimeout(type, isDeleting ? delay / 2 : delay);
+        }
+      }
+      type();
+    });
+    // Smooth scroll for navbar links
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    // Highlight active nav link on scroll
+    window.addEventListener('scroll', function() {
+      const scrollPos = window.scrollY || document.documentElement.scrollTop;
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section) {
+          if (scrollPos >= section.offsetTop - 80 && scrollPos < section.offsetTop + section.offsetHeight - 80) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        }
+      });
+    });
+  </script>
+  <!-- Sitemap: Add sitemap.xml to your project root and register with Google Search Console for best SEO. -->
+</body>
 </html>

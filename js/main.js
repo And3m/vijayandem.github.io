@@ -1,3 +1,4 @@
+/* Copyright © 2024 Vijay K Andem. All rights reserved. */
 AOS.init({
  	duration: 800,
  	easing: 'slide'
@@ -517,4 +518,18 @@ $(document).ready(function() {
   setProjectCardHeights();
   $(window).on('resize', setProjectCardHeights);
 });
+
+// Section entrance animation
+function animateSectionsOnScroll() {
+  var animatedSections = document.querySelectorAll('.section-animate');
+  var windowBottom = window.innerHeight + window.scrollY;
+  animatedSections.forEach(function(section) {
+    var sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    if (windowBottom > sectionTop + 60) {
+      section.classList.add('show');
+    }
+  });
+}
+window.addEventListener('scroll', animateSectionsOnScroll);
+window.addEventListener('DOMContentLoaded', animateSectionsOnScroll);
 
