@@ -15,13 +15,13 @@ export const navLinks = [
         label: "Projects",
     },
     {
-        name: "blog",
-        href: "/#blogs",
-        label: "Blog",
+        name: "experience",
+        href: "/#experience",
+        label: "Experience",
     },
     {
-        name: "dev",
-        href: "https://dev.shitworks.co",
-        label: "Dev",
+        name: "resume",
+        href: "/resume.pdf",
+        label: "Resume",
     },
-]
+];

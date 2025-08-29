@@ -9,6 +9,7 @@ import {
   renderSimpleIcon,
   SimpleIcon,
 } from 'react-icon-cloud';
+import { motion } from 'framer-motion';
 
 export const cloudProps: Omit<ICloud, 'children'> = {
   containerProps: {
@@ -52,6 +53,15 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       role: 'presentation',
       'aria-hidden': true,
       onClick: (e) => e.preventDefault(),
+      style: {
+        transition: 'transform 0.2s ease',
+      },
+      onMouseEnter: (e) => {
+        e.currentTarget.style.transform = 'scale(1.2)';
+      },
+      onMouseLeave: (e) => {
+        e.currentTarget.style.transform = 'scale(1)';
+      },
     },
   });
 };
@@ -86,8 +96,14 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   if (!mounted) return null;
 
   return (
-    <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
-    </Cloud>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <Cloud {...cloudProps}>
+        <>{renderedIcons}</>
+      </Cloud>
+    </motion.div>
   );
 }

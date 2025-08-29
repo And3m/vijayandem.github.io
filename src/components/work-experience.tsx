@@ -70,9 +70,12 @@ export function WorkExperience({
   className?: string;
   experiences: ExperienceItemType[];
 }) {
+  // Memoize the experience items to prevent unnecessary re-renders
+  const memoizedExperiences = React.useMemo(() => experiences, [experiences]);
+  
   return (
     <div className={cn("bg-background", className)}>
-      {experiences.map((experience) => (
+      {memoizedExperiences.map((experience) => (
         <ExperienceItem key={experience.id} experience={experience} />
       ))}
     </div>
@@ -84,6 +87,9 @@ export function ExperienceItem({
 }: {
   experience: ExperienceItemType;
 }) {
+  // Memoize the positions to prevent unnecessary re-renders
+  const memoizedPositions = React.useMemo(() => experience.positions, [experience.positions]);
+  
   return (
     <div className="space-y-4 py-4">
       <div className="not-prose flex items-center gap-3">
@@ -97,8 +103,9 @@ export function ExperienceItem({
               alt={experience.companyName}
               width={24}
               height={24}
-              quality={100}
-              unoptimized
+              quality={85} // Reduced quality for faster loading
+              unoptimized // Skip optimization for external images
+              loading="lazy" // Lazy load images
             />
           )}
         </div>
@@ -117,7 +124,7 @@ export function ExperienceItem({
       </div>
 
       <div className="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
-        {experience.positions.map((position) => (
+        {memoizedPositions.map((position) => (
           <ExperiencePositionItem key={position.id} position={position} />
         ))}
       </div>

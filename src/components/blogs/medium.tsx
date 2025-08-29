@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { appConfig } from '@/configs/config';
 import { PaginationController } from './pagination';
 import { PostCard } from './post-card';
@@ -51,7 +51,19 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
                 const rssUrl = `https://medium.com/feed/@${username}`;
                 const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
-                const response = await fetch(apiUrl);
+                // Add timeout to prevent hanging
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+
+                const response = await fetch(apiUrl, {
+                    signal: controller.signal,
+                    // Add cache headers to reduce repeated requests
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                    },
+                });
+
+                clearTimeout(timeoutId);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch posts');
@@ -92,7 +104,14 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
             }
         };
 
-        fetchMediumPosts();
+        // Add small delay to prevent blocking initial render
+        const timerId = setTimeout(() => {
+            fetchMediumPosts();
+        }, 100);
+
+        return () => {
+            clearTimeout(timerId);
+        };
     }, [username, shouldFetchPosts]);
 
     // If no username is provided, don't show the section

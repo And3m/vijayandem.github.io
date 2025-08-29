@@ -28,7 +28,13 @@ export function NavDrawer() {
                 </DrawerHeader>
                 <div className="flex items-center justify-center flex-col space-y-2 pb-8">
                     {navLinks.map((link) => (
-                        <Link key={`nav-link-${link.name}`} href={link.href} onClick={() => setOpen(false)}>
+                        <Link 
+                            key={`nav-link-${link.name}`} 
+                            href={link.href} 
+                            onClick={() => setOpen(false)}
+                            {...(link.href === "/resume.pdf" ? { target: "_blank", download: true } : {})}
+                            {...(link.href.startsWith("https://") && link.href !== "/resume.pdf" ? { target: "_blank" } : {})}
+                        >
                             {link.label}
                         </Link>
                     ))}

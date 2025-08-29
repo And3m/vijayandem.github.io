@@ -22,7 +22,7 @@ export function FlipSentences({
 
         intervalRef.current = setInterval(() => {
             setCurrentSentence((prev) => (prev + 1) % sentences.length);
-        }, 2500);
+        }, 3000); // Increased from 2500 to 3000ms to reduce CPU usage
     };
 
     useEffect(() => {
@@ -66,7 +66,7 @@ export function FlipSentences({
                         ${className}
                     `}
                     initial={{
-                        y: 12,
+                        y: 8, // Reduced from 12 to 8
                         opacity: 0,
                     }}
                     animate={{
@@ -74,11 +74,11 @@ export function FlipSentences({
                         opacity: 1,
                     }}
                     exit={{
-                        y: -12,
+                        y: -8, // Reduced from -12 to -8
                         opacity: 0,
                     }}
                     transition={{
-                        duration: 0.4,
+                        duration: 0.3, // Reduced from 0.4 to 0.3 for faster transitions
                         ease: [0.25, 0.1, 0.25, 1],
                     }}
                 >

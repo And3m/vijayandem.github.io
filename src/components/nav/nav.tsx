@@ -51,9 +51,27 @@ export function Navbar() {
 
 function NavLink({ href, label }: INavItem) {
     const pathname = usePathname();
+    
+    // Handle resume download specifically
+    if (href === "/resume.pdf") {
+        return (
+            <Link 
+                href={href} 
+                className={`text-sm font-medium ${pathname === href ? 'text-primary' : 'text-muted-foreground'}`}
+                target="_blank"
+                download
+            >
+                {label}
+            </Link>
+        );
+    }
+    
     return (
-        <Link href={href} className={`text-sm font-medium ${pathname === href ? 'text-primary' : 'text-muted-foreground'}`}
-            target={href.startsWith("https://") ? "_blank" : "_self"}>
+        <Link 
+            href={href} 
+            className={`text-sm font-medium ${pathname === href ? 'text-primary' : 'text-muted-foreground'}`}
+            target={href.startsWith("https://") ? "_blank" : "_self"}
+        >
             {label}
         </Link>
     );

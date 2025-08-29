@@ -58,6 +58,10 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
                             alt={project.title}
                             fill
                             className="object-cover transition-transform duration-300 hover:scale-105"
+                            // Add optimization props
+                            loading="lazy"
+                            quality={75}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                     </div>
                 </Link>
@@ -69,6 +73,10 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-105"
+                        // Add optimization props
+                        loading="lazy"
+                        quality={75}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                 </div>
             )}

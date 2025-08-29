@@ -10,8 +10,22 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "dummyimage.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
-  }
+  },
+  // Add performance optimizations
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      '@radix-ui/react-*',
+    ],
+  },
 };
 
 export default nextConfig;

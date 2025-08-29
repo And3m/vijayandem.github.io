@@ -1,3 +1,5 @@
+"use client";
+
 import { techs } from './constants';
 import DotPattern from '../ui/dot-pattern';
 import IconCloud from '../ui/icon-cloud';
@@ -12,7 +14,7 @@ const TechTag = ({
 }) => {
     return (
         <MagicCard
-            className="flex w-fit items-center justify-center px-2.5 py-2 bg-secondary/50 rounded-md text-primary/60 border-l-2 border-t-2 border-b border-r border-primary/10 shadow-md shadow-secondary/50"
+            className="flex w-fit items-center justify-center px-2.5 py-2 bg-secondary/50 rounded-md text-primary/60 border-l-2 border-t-2 border-b border-r border-primary/10 shadow-md shadow-secondary/50 hover:scale-105 transition-transform duration-300"
             gradientColor={gradientColor}
             gradientOpacity={0.25}
         >
@@ -34,7 +36,7 @@ export const TechSection = () => {
                     </p>
                 </div>
                 <div className="flex flex-col flex-wrap items-center justify-center gap-8">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 justify-center">
                         {techs.map((tech) => (
                             <TechTag
                                 key={tech.label}
