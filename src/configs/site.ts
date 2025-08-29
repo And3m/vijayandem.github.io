@@ -1,17 +1,41 @@
 export const SITE_INFO = {
-    site_name: 'Shitworks',
-    url: 'https://shitworks.co',
-    meta_desc: 'Explore Shivesh Tiwari’s developer portfolio at shitworks.co. Showcasing web apps, innovative projects, and full-stack development work with a bold, creative edge. Discover how code, creativity, and problem-solving come together—sometimes messy, always effective.',
-    keywords: ['Shitworks', 'shitworks.co', 'Shivesh Tiwari', 'Developer', 'Developer Portfolio']
+    site_name: 'And3m | Business Analyst',
+    url: 'https://and3m.github.io',
+    meta_desc: 'Business Analyst & Data Visualization Specialist with expertise in Power BI, Tableau, and Streamlit dashboard development. Transforming complex datasets into compelling visual stories.',
+    keywords: ['Business Analyst', 'Data Visualization', 'Power BI', 'Tableau', 'Streamlit', 'Vijay Andem', 'Data Analytics']
 }
 
 export const ABOUT_ME = `
-Hello, World!
-Hi, I am Shivesh Tiwari, a 20 year old developer based in India. I love to build software and am passionate about building high performance software.
+## 🚀 Data Analyst | Business Intelligence Professional | Insight Creator
 
-I specialize in full-stack development across both mobile and web, with deep expertise in frameworks and technologies like React, React Native, TypeScript, Node.js, Supabase, and Rust. From crafting seamless user experiences to designing optimized backends, I enjoy turning ideas into production-ready products.
+Hello! I'm Vijay K Andem, a seasoned Business Analyst with 5+ years of experience driving business strategies through data-driven insights. I specialize in transforming complex datasets into compelling visual stories using Power BI, Tableau, and Streamlit dashboard development.
 
-Over the years, I’ve worked on projects ranging from AI-powered platforms and mobile apps to developer tools and open-source projects, always with a focus on performance, usability, and innovation.
+### Professional Expertise:
+- **Data Visualization Specialist**: Creating interactive dashboards that tell compelling business stories
+- **Business Intelligence Professional**: Leveraging Power BI, Tableau, and Streamlit for actionable insights
+- **Problem Solver**: Bridging technical data analysis and strategic business insights
+- **Continuous Learner**: Expanding expertise in advanced analytics, machine learning, and Generative AI
+- **Strategic Thinker**: Driving data-driven decision making across organizations
 
-Let's connect and look for future collaborations!
+### Domain Expertise:
+- Pharma & Healthcare Analytics
+- Co-Marketing & Digital Marketing Analytics
+- Ecommerce & FMCG Analytics
+- Customer Behavior Analysis
+- Market Research & Competitive Intelligence
+
+### Technical Skills:
+- **BI Tools**: Microsoft Power BI, Tableau, Looker, Streamlit
+- **Programming**: Python, SQL, DAX, Power Query
+- **Data Science Libraries**: Pandas, Plotly, Matplotlib, Seaborn
+- **Cloud & Dev Tools**: Git, JIRA, Google Analytics, SEO
+- **AI/ML Technologies**: LangChain, RAG Systems, LLM Applications
+
+### Professional Certifications:
+- Power BI Data Analyst Associate
+- Tableau Desktop Specialist
+- Python Data Science Professional
+- Generative AI LLM & RAG Specialist
+
+Let's connect and transform data into impactful solutions together!
 `;

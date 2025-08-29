@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselApi, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { IProjects } from "@/sections/projects";
 import { ProjectCard } from "./project-card";
 import { cn } from "@/lib/utils";
@@ -98,6 +98,8 @@ export function ProjectsCarousel({
                             </CarouselItem>
                         ))}
                     </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
                 </Carousel>
             </div>
 

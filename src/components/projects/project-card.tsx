@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { IProjects } from "@/sections/projects";
@@ -48,15 +49,29 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
         <Card className={`w-full h-full transition-all duration-300 
             bg-secondary/50 shadow-lg shadow-secondary/50 rounded-md
             ${isActive ? 'border-2 border-primary/40' : 'border-l-2 border-t-2 border-b border-r border-primary/10'}`}>
-            <div className="relative w-full aspect-[127/76] overflow-hidden rounded-t-lg bg-muted">
-                {/* 1270x760px images best */}
-                <Image
+            {project.repoUrl ? (
+                <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                    <div className="relative w-full aspect-[127/76] overflow-hidden rounded-t-lg bg-muted cursor-pointer">
+                        {/* 1270x760px images best */}
+                        <Image
+                            src={project.image || getDumnyImageUrl(project.title, "1270x760")}
+                            alt={project.title}
+                            fill
+                            className="object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                    </div>
+                </Link>
+            ) : (
+                <div className="relative w-full aspect-[127/76] overflow-hidden rounded-t-lg bg-muted">
+                    {/* 1270x760px images best */}
+                    <Image
                         src={project.image || getDumnyImageUrl(project.title, "1270x760")}
                         alt={project.title}
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-105"
                     />
-            </div>
+                </div>
+            )}
             <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                     {getTypeIcon(project.type)}
@@ -64,7 +79,15 @@ export function ProjectCard({ project, isActive = false }: ProjectCardProps) {
                         {getTypeDisplayName(project.type)}
                     </Badge>
                 </div>
-                <CardTitle className="text-lg line-clamp-1">{project.title}</CardTitle>
+                {project.repoUrl ? (
+                    <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                        <CardTitle className="text-lg line-clamp-1 hover:text-primary cursor-pointer">
+                            {project.title}
+                        </CardTitle>
+                    </Link>
+                ) : (
+                    <CardTitle className="text-lg line-clamp-1">{project.title}</CardTitle>
+                )}
                 <CardDescription className="line-clamp-2 text-sm">
                     {project.shortDescription}
                 </CardDescription>

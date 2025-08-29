@@ -30,11 +30,19 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
     const [error, setError] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(0);
 
+    // If no username is provided, don't fetch posts
+    const shouldFetchPosts = username && username.trim() !== '';
+
     const totalPages = Math.ceil(posts.length / postsPerPage);
     const startIndex = currentPage * postsPerPage;
     const currentPosts = posts.slice(startIndex, startIndex + postsPerPage);
 
     useEffect(() => {
+        if (!shouldFetchPosts) {
+            setLoading(false);
+            return;
+        }
+
         const fetchMediumPosts = async () => {
             try {
                 setLoading(true);
@@ -59,7 +67,7 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
                     const imgMatch = item.content?.match(/<img[^>]+src="([^">]+)"/);
                     const thumbnail = imgMatch ? imgMatch[1] : null;
                     const cleanContent = item.content
-                        ?.replace(/<[^>]*>/g, '') // Remove HTML tags
+                        ?.replace(/<[^>]*>/g, ''); // Remove HTML tags
                     const cleanDescription = item.description
                         ?.replace(/<[^>]*>/g, '') // Remove HTML tags
                         ?.substring(0, 150) + '...';
@@ -85,11 +93,44 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
         };
 
         fetchMediumPosts();
-    }, [username]);
+    }, [username, shouldFetchPosts]);
+
+    // If no username is provided, don't show the section
+    if (!shouldFetchPosts) {
+        return null;
+    }
 
     if (error) {
         console.error('Error fetching Medium posts:', error);
-        return null;
+        // Instead of returning null, let's show a message or handle gracefully
+        return (
+            <div id='blogs' className="relative w-full flex items-center justify-center mt-8 py-14">
+                <div className="flex flex-col max-w-4xl w-full px-6 md:px-0">
+                    <div className="mb-6 flex justify-between items-center">
+                        <div className="text-4xl font-bold mb-2">Insights & Articles</div>
+                    </div>
+                    <div className="text-center py-8">
+                        <p className="text-muted-foreground">No articles found. Check back later for updates.</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    // Handle case when there are no posts
+    if (!loading && posts.length === 0) {
+        return (
+            <div id='blogs' className="relative w-full flex items-center justify-center mt-8 py-14">
+                <div className="flex flex-col max-w-4xl w-full px-6 md:px-0">
+                    <div className="mb-6 flex justify-between items-center">
+                        <div className="text-4xl font-bold mb-2">Insights & Articles</div>
+                    </div>
+                    <div className="text-center py-8">
+                        <p className="text-muted-foreground">No articles published yet. Check back later for updates.</p>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -97,7 +138,7 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
             <div className="flex flex-col max-w-4xl w-full px-6 md:px-0">
                 {/* Header */}
                 <div className="mb-6 flex justify-between items-center">
-                    <div className="text-4xl font-bold mb-2">Blogs</div>
+                    <div className="text-4xl font-bold mb-2">Insights & Articles</div>
                     <PaginationController totalPages={totalPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
                 </div>
 

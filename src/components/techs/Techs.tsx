@@ -27,10 +27,10 @@ export const TechSection = () => {
             <div className="relative flex flex-col max-w-4xl w-full px-6 md:px-0">
                 <div className="mb-6">
                     <div className="text-4xl font-bold mb-2">
-                        Stack
+                        Tech Stack
                     </div>
                     <p className='max-w-2xl text-secondary-foreground/60'>
-                        I like to build new projects which include a variety of tech stack from web to app, from frontend to backend and devops. I like to learn new stacks while building.
+                        As a Business Analyst and Data Visualization Specialist, I leverage a powerful combination of tools and technologies to transform data into actionable insights and compelling visual stories.
                     </p>
                 </div>
                 <div className="flex flex-col flex-wrap items-center justify-center gap-8">

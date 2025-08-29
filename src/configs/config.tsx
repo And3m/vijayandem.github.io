@@ -1,34 +1,31 @@
 import { Button } from "@/components/ui/button";
 import { IAppConfig } from "@/types";
-import { Code, Github, Globe, Lightbulb, Linkedin, MapPin, TwitterIcon } from "lucide-react";
+import { Code, Github, Globe, Lightbulb, MapPin, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 import { SITE_INFO } from "./site";
 
 export const appConfig: IAppConfig = {
     profile: {
-        name: 'Shivesh Tiwari',
-        image: 'https://pbs.twimg.com/profile_images/1907872571028058112/bj7cnwbr_400x400.jpg',
-        email: 'shiveshtiwari0@gmail.com',
+        name: 'And3m',
+        image: '/hero/about-me.jpg',
+        email: 'vijayandem@gmail.com',
         location: 'Bengaluru, India',
         sentences: [
-            'Full stack engineer',
-            'App Developer',
-            'AI Developer',
-            'Open source contributor',
+            'Business Analyst',
+            'Data Visualization Specialist',
+            'Power BI & Tableau Expert',
+            'Generative AI Enthusiast',
         ],
         panel: [
             {
                 icon: Code,
-                text: 'Full stack engineer',
+                text: 'Business Analyst & Data Visualization Specialist',
             },
             {
                 icon: Lightbulb,
                 text: (
                     <>
-                        Co-founder @
-                        <Button variant={"link"} className="p-0 text-md">
-                            <Link href={'https://escaleit.in'}>Escaleit</Link>
-                        </Button>
+                        Specializing in Power BI, Tableau & Streamlit
                     </>
                 ),
             },
@@ -47,73 +44,109 @@ export const appConfig: IAppConfig = {
             {
                 name: 'Github',
                 icon: Github,
-                link: 'https://github.com/TheShiveshNetwork',
-                username: 'TheShiveshNetwork'
+                link: 'https://github.com/And3m',
+                username: 'And3m'
+            },
+            {
+                name: 'LinkedIn',
+                icon: Globe,
+                link: 'https://www.linkedin.com/in/vijay-andem-b2092223/',
+                username: 'vijay-andem'
             },
             {
                 name: 'X',
                 icon: TwitterIcon,
-                link: 'https://x.com/whoisshivesh',
-                username: 'whoisshivesh'
-            },
-            {
-                name: 'LinkedIn',
-                icon: Linkedin,
-                link: 'https://www.linkedin.com/in/shivesh-tiwari-88b451242',
-                username: 'shivesh-tiwari'
+                link: 'https://twitter.com/vijayandem',
+                username: 'vijayandem'
             },
             {
                 name: 'Medium',
                 icon: Globe,
-                link: 'https://mrknown404.medium.com',
-                username: 'mrknown404'
-            }
+                link: 'https://medium.com/@vijayandem',
+                username: 'vijayandem'
+            },
         ]
     },
     experience: [
         {
             id: "1",
-            companyName: "Escaleit",
-            companyLogo: "https://escaleit.in/_app/immutable/assets/escaleit_logo.DmD4-_D8.png",
-            isCurrentEmployer: true,
+            companyName: "Cavinkare Pvt Ltd",
+            companyLogo: "https://media.licdn.com/dms/image/C4D0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/cavinkare_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            isCurrentEmployer: false,
             positions: [
                 {
-                    id: "2-1",
-                    title: "Co-founder",
-                    employmentPeriod: "Jan 2025 - Present",
+                    id: "1-1",
+                    title: "Business Analyst",
+                    employmentPeriod: "Mar 2022 - Dec 2023",
                     employmentType: "Full-time",
-                    description: `- Co-Founded a marketting agency, based in Bangalore India.
-- Developed the website for it, automated workflows, ran analytics, SEO, ad tools, etc.
-- Been handling all the technical sides`,
+                    description: `- Conducted data-driven market research and customer behavior analysis using Neilsen/Kantar.
+- Delivered predictive insights to C-suite for marketing strategy and campaign effectiveness.
+- Collaborated cross-functionally to execute marketing plans based on analytics and KPIs.
+- Led performance tracking, budget analysis, and reporting through automated dashboards (Power BI).`,
                     icon: "business",
-                    skills: ["SEO", "Marketing"],
+                    skills: ["Power BI", "Market Research", "Predictive Analytics", "KPIs"],
                     isExpanded: true,
                 },
             ],
         },
         {
             id: "2",
-            companyName: "Livana Technologies",
-            companyLogo: "https://mybazaar.co.in/assets/Logo-Cxj6cGbY.png",
+            companyName: "IBM India Pvt Ltd",
+            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/ibm_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
             positions: [
                 {
-                    id: "1-1",
-                    title: "Full stack Engineer Intern",
-                    employmentPeriod: "Dec 2022 - Jun 2025",
+                    id: "2-1",
+                    title: "Marketing Analyst",
+                    employmentPeriod: "Jul 2016 - Mar 2022",
                     employmentType: "Full-time",
-                    description: `- Worked as a remote developer on a platform using which shopkeepers can create and
- manage their e-commerce portals.
- - Collaborated with other developers to create the backend for the seller and customer
- facing dashboards and built a robust authentication architecture.
- - Developed the initial landing page and frontend for the website.
-                    `,
+                    description: `- Designed and automated global marketing dashboards for performance and revenue pipeline analysis.
+- Provided strategic marketing recommendations using SQL, Python, and visualization tools.
+- Researched competitive strategy and built insights dashboards for global leaders.
+- Drove process optimization and operational efficiency through analytics and automation.`,
                     icon: "code",
-                    skills: ["Typescript", "Express", "MongoDB", "Node.js", "React"],
+                    skills: ["SQL", "Python", "Power BI", "Tableau", "Marketing Analytics"],
+                    isExpanded: true,
+                },
+            ],
+        },
+        {
+            id: "3",
+            companyName: "Indegene Life Systems Pvt Ltd",
+            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/indegene_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            positions: [
+                {
+                    id: "3-1",
+                    title: "Reporting Analyst",
+                    employmentPeriod: "Aug 2015 – May 2016",
+                    employmentType: "Full-time",
+                    description: `- Delivered automated marketing and sales performance reports using data mining and visualization.
+- Created dashboards and answered ad-hoc business queries by analyzing large datasets.
+- Supported consulting initiatives by identifying customer insights and improving data presentation.`,
+                    icon: "code",
+                    skills: ["Data Mining", "Visualization", "Reporting", "Excel"],
+                    isExpanded: true,
+                },
+            ],
+        },
+        {
+            id: "4",
+            companyName: "Infosys Ltd",
+            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/infosys_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            positions: [
+                {
+                    id: "4-1",
+                    title: "Data Analyst",
+                    employmentPeriod: "Mar 2011 – Aug 2015",
+                    employmentType: "Full-time",
+                    description: `- Developed and automated reports/dashboards using Excel, SQL, VBA, and MS Access for tax processing insights.
+- Translated business requirements into reporting solutions for decision-making and improvements.`,
+                    icon: "code",
+                    skills: ["Excel", "SQL", "VBA", "MS Access", "Reporting"],
                     isExpanded: true,
                 },
             ],
         },
     ],
-    mediumUsername: 'mrknown404',
-    githubUrl: 'https://github.com/TheShiveshNetwork/next_portfolio',
+    mediumUsername: '', // Removed as user doesn't have a Medium account
+    githubUrl: 'https://github.com/And3m',
 }

@@ -3,55 +3,73 @@ import { IProjects } from "@/sections/projects";
 {/* 1270x760px images best */ }
 export const ALL_PROJECTS: IProjects[] = [
     {
+        type: "ai",
+        title: "MCP Data Analysis Toolkit",
+        shortDescription: "Model Context Protocol implementation for data analysis with AI agent integration",
+        longDescription:
+            "Model Context Protocol implementation for data analysis with AI Agent Integration and data processing capabilities. Features automated analytics through intelligent tool discovery and an extensible framework for custom data analysis workflows.",
+        image: "/projects/mcp-data-analysis-toolkit.png",
+        stack: ["Python", "MCP", "AI Agents", "Data Analysis", "Protocol Buffers", "LLMs"],
+        repoUrl: "https://github.com/And3m/mcp-data-analysis-toolkit",
+    },
+    {
+        type: "ai",
+        title: "Interactive AI Chat Agent",
+        shortDescription: "Interactive Chat Interface with 2048-token responses and real-time monitoring",
+        longDescription:
+            "Interactive Chat Interface with 2048-token responses, real-time monitoring and system analytics. Features advanced commands (/status, /metrics, /help) and is 100% local & private - no external APIs required.",
+        image: "/projects/interactive-ai-chat-agent.png",
+        stack: ["Python", "Chainlit", "Ollama", "Llama 3.2 3B", "psutil", "Real-time Analytics"],
+        repoUrl: "https://github.com/And3m/interactive-ai-chat-agent",
+    },
+    {
+        type: "ai",
+        title: "LangChain Playbook",
+        shortDescription: "Comprehensive Tutorials from basics to advanced LangChain applications",
+        longDescription:
+            "Comprehensive Tutorials from basics to advanced with hands-on learning and practical examples. Features real-world projects including chatbots, RAG systems, and agents with a structured learning path for all skill levels.",
+        image: "/projects/langchain-playbook.png",
+        stack: ["Python", "LangChain", "OpenAI", "Anthropic", "RAG", "Vector Databases"],
+        repoUrl: "https://github.com/And3m/langchain-playbook",
+    },
+    {
         type: "app",
-        title: "Pebbl",
-        shortDescription: "A short and anonymous microblogging application",
+        title: "Coffee Shop Sales Dashboard",
+        shortDescription: "Interactive Streamlit dashboard for real-time sales analytics",
         longDescription:
-            "Pebbl is a cross-platform anonymous microblogging application designed for users to express themselves freely without the pressure of personal identity. Built using React Native and powered by Supabase, it provides a secure and real-time backend for seamless interactions. The app focuses on simplicity, minimalism, and privacy—enabling people to share thoughts, stories, and experiences with a community while staying completely anonymous. The core idea is to build a space where authenticity thrives without the fear of judgment.",
-        image: "https://ften894tg4.ufs.sh/f/zB6K8wVrTHjYtUULdufoSq807FQT9DUCekNYLzfrbu4icREJ",
-        stack: ["React Native", "TypeScript", "Supabase"],
+            "Interactive Streamlit dashboard for real-time sales analytics with KPIs, advanced analytics, and modern Plotly visualizations. Features include real-time monitoring, trend analysis, and engaging user experience with modern visualizations.",
+        image: "/projects/coffee-shop-dashboard.png",
+        stack: ["Streamlit", "Pandas", "Plotly", "Python"],
+        repoUrl: "https://github.com/And3m/coffee-shop-sales-dashboard",
     },
     {
-        type: "ml",
-        title: "Furtech",
-        shortDescription: "AI Powered Pet Care System",
+        type: "app",
+        title: "HR Dashboard Analytics",
+        shortDescription: "Comprehensive HR analytics dashboard in Tableau",
         longDescription:
-            "Furtech is an AI-driven pet care platform developed during a 24-hour hackathon. The system integrates multiple machine learning models and AI-powered tools to assist pet owners in providing better care for their pets. It comes with four key features: (1) Personalized Diet Planning using ML algorithms to suggest optimal nutrition, (2) Behaviour Analysis through image classification to detect stress, aggression, or happiness in pets, (3) A Chat with AI assistant for pet-related queries, and (4) Health Analysis that predicts potential health issues based on input data. Some models were trained from scratch, while others were fine-tuned from open-source LLMs like Mistral and multimodal models like Paligemma. Furtech pushes the boundary of practical AI applications by combining vision, NLP, and predictive analytics in one cohesive system.",
-        image: "https://ften894tg4.ufs.sh/f/b9434047-488f-42c9-866a-f6d756a44728-ra6pnt.png",
-        stack: ["Pytorch", "Python", "React"],
+            "Comprehensive HR analytics dashboard in Tableau with workforce insights and key HR trends. Features include comprehensive HR analytics with workforce insights, data pre-processing and visualization, key HR trends analysis and performance metrics, and in-depth employee insights and retention analytics.",
+        image: "/projects/hr-dashboard.png",
+        stack: ["Tableau", "Data Preprocessing", "HR Analytics"],
+        repoUrl: "https://github.com/And3m/hr-dashboard-analytics",
     },
     {
-        type: "web",
-        title: "Social Network",
-        shortDescription: "A full stack web app",
+        type: "app",
+        title: "Restaurant Ratings Analysis",
+        shortDescription: "Power BI dashboard analyzing restaurant ratings and consumer behavior",
         longDescription:
-            "Made with: React, Firebase, Sass. This is a full-stack Social Media app with many awesome features. From writing posts, users can also like and comment on the posts. One can also follow people and create a Network. *This Social Media App has a special communities feature to post long articles and stories*.",
-        image: "https://ften894tg4.ufs.sh/f/e7cb7036-fcdb-433b-91b5-91d05c5dafff_Untitled design (2).png",
-        stack: ["React", "Firebase"],
+            "Power BI dashboard analyzing restaurant ratings, consumer behavior, and trends in Mexico. Features include 5-page interactive dashboard with comprehensive insights, geographic analysis of restaurant distribution, consumer behavior patterns and demographic correlations, and rating trends analysis across different categories.",
+        image: "/projects/restaurant-ratings.png",
+        stack: ["Power BI", "DAX", "Power Query", "Excel"],
+        repoUrl: "https://github.com/And3m/restaurant-ratings-analysis",
     },
     {
-        type: "web",
-        title: "AI Image Generator",
-        shortDescription: "A full stack web app",
+        type: "app",
+        title: "Superstore Sales Analysis",
+        shortDescription: "Comprehensive EDA of sales data with customer segmentation",
         longDescription:
-            "Made with: MERN, This project is an AI Image Generator made with the help of OpenAI API. This project has many features, like user registration and login, creating images and sharing them with the community.",
-        image: "https://ften894tg4.ufs.sh/f/a55eec96-35e6-4590-8510-ab55308e5fb6_Untitled design (1).png",
-        stack: ["React", "Express", "MongoDB"],
-    },
-    {
-        type: "tool",
-        title: "Moye",
-        shortDescription: "A meme language",
-        longDescription:
-            "Moye is a toy programming language designed as a fun exploration into the fundamentals of language design and compiler construction. Inspired by internet meme culture, the language balances humor with technical depth. The project involved building a custom parser from scratch, experimenting with backtracking algorithms, and implementing a working REPL for interactive testing. Moye serves as both a creative expression and a practical deep dive into how interpreters and compilers operate under the hood. It demonstrates the journey of turning an idea—from syntax rules to execution—into a functional programming language.",
-        stack: ["Rust"],
-    },
-    {
-        type: "tool",
-        title: "create-express-app",
-        shortDescription: "A lightweight binary to build heavyweight express applications",
-        longDescription:
-            "create-express-app is a developer-friendly CLI tool that simplifies the process of bootstrapping Express.js applications. Instead of starting from scratch, developers can spin up a production-ready Express app with sensible defaults, structured folder organization, and best practices already integrated. The tool removes repetitive setup tasks, making it faster to prototype APIs or full-stack applications. Built with Node.js and TypeScript, it emphasizes modularity, scalability, and developer experience—helping both beginners and experienced developers jump straight into building features instead of boilerplate.",
-        stack: ["TypeScript", "Node.js", "CLI"],
+            "Comprehensive EDA of sales performance data with customer segmentation and sales trend forecasting. Features include comprehensive exploratory data analysis of sales performance data, customer segmentation analysis and profiling, performance metrics visualization and insights, and sales trend identification and forecasting.",
+        image: "/projects/superstore-analysis.png",
+        stack: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+        repoUrl: "https://github.com/And3m/superstore-sales-analysis",
     },
 ];

@@ -11,39 +11,39 @@ export const HeroSection = () => {
     return (
         <div className="w-full flex flex-col items-center">
             <ProfileHeader />
-            <div className="flex items-end gap-4 md:gap-8 max-w-4xl w-full px-6 md:px-0 mt-10">
+            <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl w-full px-6 md:px-0 mt-10">
                 {/* profile pic */}
-                <div className="w-28 h-28 md:w-42 md:h-42 overflow-hidden rounded-full bg-gray-600">
+                <div className="w-32 h-32 md:w-48 md:h-48 overflow-hidden rounded-full bg-gray-600 border-4 border-primary/10">
                     <Image
-                        height={100}
-                        width={100}
+                        height={200}
+                        width={200}
                         src={appConfig.profile.image}
                         className="h-full w-full object-cover"
-                        alt="pfp"
+                        alt="Profile Picture"
                     />
                 </div>
                 {/* profile info */}
-                <div className="flex flex-col">
-                    <div className="flex items-center justify-center gap-2">
-                        <div className="font-semibold text-2xl md:text-3xl">{appConfig.profile.name}</div>
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div className="flex items-center justify-center md:justify-start gap-2">
+                        <h1 className="font-bold text-3xl md:text-5xl">{appConfig.profile.name}</h1>
                         <SimpleTooltip content="Verified">
                             <VerifiedIcon className="text-blue-500 h-6 w-6" />
                         </SimpleTooltip>
                     </div>
-                    <div className="mt-2">
+                    <div className="mt-4">
                         <FlipSentences sentences={appConfig.profile.sentences} />
                     </div>
+                    <div className="mt-6">
+                        <Link href={`mailto:${appConfig.profile.email}`}>
+                            <Button
+                                variant={"default"}
+                                className="bg-blue-500/80 hover:bg-blue-500/90 transition-colors text-primary rounded-xl cursor-pointer px-6 py-3 text-lg"
+                            >
+                                Contact Me
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <div className="flex items-start max-w-4xl w-full px-6 md:px-0 mt-4">
-                <Link href={`mailto:${appConfig.profile.email}`}>
-                    <Button
-                        variant={"default"}
-                        className="bg-blue-500/80 hover:bg-blue-500/90 transition-colors text-primary rounded-xl cursor-pointer ml-0.5 md:ml-7.5"
-                    >
-                        Contact Me
-                    </Button>
-                </Link>
             </div>
         </div>
     );
