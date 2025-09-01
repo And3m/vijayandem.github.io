@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export function ProfileSection({ className }: { className?: string }) {
     return (
-        <div className={cn("w-full flex flex-col items-center mt-14", className)}>
+        <div className={cn("w-full flex flex-col items-center mt-8", className)}>
             <div className="grid md:grid-cols-2 gap-2 max-w-4xl w-full px-6 md:px-0">
                 <ProfilePanel />
             </div>

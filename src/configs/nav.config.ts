@@ -11,12 +11,12 @@ export const navLinks = [
     },
     {
         name: "projects",
-        href: "/#projects",
+        href: "/projects",
         label: "Projects",
     },
     {
         name: "experience",
-        href: "/#experience",
+        href: "/experience",
         label: "Experience",
     },
     {

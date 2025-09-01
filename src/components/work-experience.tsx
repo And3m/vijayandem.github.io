@@ -1,4 +1,5 @@
 import {
+  BotIcon,
   BriefcaseBusinessIcon,
   ChevronsDownUpIcon,
   ChevronsUpDownIcon,
@@ -23,6 +24,7 @@ const iconMap = {
   design: DraftingCompassIcon,
   business: BriefcaseBusinessIcon,
   education: GraduationCapIcon,
+  ai: BotIcon,
 } as const;
 
 /**

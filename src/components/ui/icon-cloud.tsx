@@ -32,13 +32,13 @@ export const cloudProps: Omit<ICloud, 'children'> = {
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: '#0000',
-    maxSpeed: 0.04,
-    minSpeed: 0.02,
-    // dragControl: false,
+    maxSpeed: 0.02, // Reduced from 0.04 to 0.02 for better performance
+    minSpeed: 0.01, // Reduced from 0.02 to 0.01 for better performance
+    dragControl: false, // Disabled drag control for better performance
   },
 };
 
-export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
+export const renderCustomIcon = (icon: SimpleIcon, theme: string, tooltip?: string) => {
   const bgHex = theme === 'light' ? '#f3f2ef' : '#080510';
   const fallbackHex = theme === 'light' ? '#6e6e73' : '#ffffff';
   const minContrastRatio = theme === 'dark' ? 2 : 1.2;
@@ -53,6 +53,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       role: 'presentation',
       'aria-hidden': true,
       onClick: (e) => e.preventDefault(),
+      title: tooltip || icon.title,
       style: {
         transition: 'transform 0.2s ease',
       },
@@ -68,11 +69,12 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
 
 export type DynamicCloudProps = {
   iconSlugs: string[];
+  tooltips?: Record<string, string>;
 };
 
 type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
-export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
+export default function IconCloud({ iconSlugs, tooltips }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
@@ -89,9 +91,9 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, 'dark'),
+      renderCustomIcon(icon, theme || 'dark', tooltips?.[icon.slug]),
     );
-  }, [data, theme]);
+  }, [data, theme, tooltips]);
 
   if (!mounted) return null;
 

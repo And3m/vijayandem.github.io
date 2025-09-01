@@ -5,12 +5,9 @@ import { SITE_INFO } from "@/configs/site";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "And3m | Business Analyst",
+  title: "Vijay K Andem | Business Analyst",
   description: "Business Analyst & Data Visualization Specialist",
   keywords: `${SITE_INFO.keywords.join(", ")}`,
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function Layout({
@@ -20,6 +17,13 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preload critical resources */}
+        <link rel="preload" href="/hero/about-me.jpg" as="image" type="image/jpeg" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="//fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      </head>
       <body className={`antialiased min-h-screen`} suppressHydrationWarning>
         <ThemeProvider enableSystem defaultTheme="system" attribute="class">
           {children}

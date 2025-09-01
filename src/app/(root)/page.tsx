@@ -1,13 +1,20 @@
-import { Suspense } from 'react';
-import { AngledLinesPattern } from "@/components/common/separator";
+import dynamic from 'next/dynamic';
 import { HeroSection } from "@/sections/hero";
 import { ProfileSection } from "@/sections/profile";
 import { SocialSecion } from "@/sections/social";
-import { Experience } from "@/components/experience";
-import { TechSection } from "@/components/techs/Techs";
 
-// Lazy load components that aren't critical for initial render
-import { Projects } from "@/sections/projects";
+// Lazy load heavy components with optimized loading
+const Experience = dynamic(() => import("@/components/experience").then(mod => ({ default: mod.Experience })), {
+  loading: () => <ExperienceSkeleton />
+});
+
+const TechSection = dynamic(() => import("@/components/techs/Techs").then(mod => ({ default: mod.TechSection })), {
+  loading: () => <TechSkeleton />
+});
+
+const Projects = dynamic(() => import("@/sections/projects").then(mod => ({ default: mod.Projects })), {
+  loading: () => <ProjectsSkeleton />
+});
 
 // Loading skeletons for lazy components
 function ProjectsSkeleton() {
@@ -24,18 +31,27 @@ function ProjectsSkeleton() {
   );
 }
 
-function MediumPostsSkeleton() {
+function ExperienceSkeleton() {
   return (
-    <div id='blogs' className="relative w-full flex items-center justify-center mt-8 py-14">
-      <div className="flex flex-col max-w-4xl w-full px-6 md:px-0">
-        <div className="mb-6 flex justify-between items-center">
-          <div className="h-10 bg-muted rounded w-1/3"></div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {[...Array(4)].map((_, i) => (
-            <div key={i} className="h-48 bg-muted rounded"></div>
+    <div className="w-full flex justify-center py-8">
+      <div className="max-w-4xl w-full px-6 md:px-0">
+        <div className="h-8 bg-muted rounded w-1/3 mb-6"></div>
+        <div className="space-y-4">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="h-24 bg-muted rounded"></div>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function TechSkeleton() {
+  return (
+    <div className="w-full flex justify-center py-8">
+      <div className="max-w-4xl w-full px-6 md:px-0">
+        <div className="h-8 bg-muted rounded w-1/4 mb-6"></div>
+        <div className="h-64 bg-muted rounded"></div>
       </div>
     </div>
   );
@@ -48,12 +64,8 @@ export default function Home() {
       <ProfileSection />
       <SocialSecion />
       <Experience />
-      <AngledLinesPattern spacing={5} className="h-10 border-primary border-t border-b" />
       <TechSection />
-      <Suspense fallback={<ProjectsSkeleton />}>
-        <Projects />
-      </Suspense>
-      {/* Removed the enhanced experience section to keep the landing page clean */}
+      <Projects />
     </>
   );
 }

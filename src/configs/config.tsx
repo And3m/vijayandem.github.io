@@ -6,7 +6,7 @@ import { SITE_INFO } from "./site";
 
 export const appConfig: IAppConfig = {
     profile: {
-        name: 'And3m',
+        name: 'Vijay K Andem',
         image: '/hero/about-me.jpg',
         email: 'vijayandem@gmail.com',
         location: 'Bengaluru, India',
@@ -68,6 +68,28 @@ export const appConfig: IAppConfig = {
         ]
     },
     experience: [
+        {
+            id: "0",
+            companyName: "Strategic Career Transition",
+            companyLogo: "/hero/about-me.jpg",
+            isCurrentEmployer: false,
+            positions: [
+                {
+                    id: "0-1",
+                    title: "AI-Augmented Analytics Specialist & Entrepreneur",
+                    employmentPeriod: "Jan 2024 - May 2025",
+                    employmentType: "Independent Exploration",
+                    description: `- Conducted extensive research into AI-driven analytics trends, including LLM integration in business intelligence.
+- Designed and prototyped intelligent data products using LangChain, PandasAI, Streamlit, ChatGPT plugins, and OpenAI APIs.
+- Developed proof-of-concept solutions for RAG-based architectures and natural language data interfaces.
+- Contributed to open-source community with AI-focused analytics tools and business applications.
+- Focused strategic upskilling in advanced analytics and scalable, next-gen analytics solutions.`,
+                    icon: "ai",
+                    skills: ["LangChain", "RAG", "LLMs", "PandasAI", "ChatGPT Plugins", "OpenAI APIs", "Streamlit"],
+                    isExpanded: true,
+                },
+            ],
+        },
         {
             id: "1",
             companyName: "Cavinkare Pvt Ltd",

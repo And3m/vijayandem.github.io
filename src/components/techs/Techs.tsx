@@ -8,15 +8,18 @@ import { MagicCard } from '../ui/magic-card';
 const TechTag = ({
     gradientColor,
     title,
+    tooltip,
 }: {
     gradientColor: string;
     title: string;
+    tooltip?: string;
 }) => {
     return (
         <MagicCard
             className="flex w-fit items-center justify-center px-2.5 py-2 bg-secondary/50 rounded-md text-primary/60 border-l-2 border-t-2 border-b border-r border-primary/10 shadow-md shadow-secondary/50 hover:scale-105 transition-transform duration-300"
             gradientColor={gradientColor}
             gradientOpacity={0.25}
+            title={tooltip}
         >
             <p className="font-Silkscreen text-sm text-whiteice">{title}</p>
         </MagicCard>
@@ -42,12 +45,19 @@ export const TechSection = () => {
                                 key={tech.label}
                                 title={tech.label}
                                 gradientColor={tech.bgColor}
+                                tooltip={tech.tooltip}
                             />
                         ))}
                     </div>
 
                     <div>
-                        <IconCloud iconSlugs={techs.map((tech) => tech.label)} />
+                        <IconCloud 
+                            iconSlugs={techs.map((tech) => tech.label)} 
+                            tooltips={techs.reduce((acc, tech) => ({ 
+                                ...acc, 
+                                [tech.label]: tech.tooltip 
+                            }), {})} 
+                        />
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -15,7 +15,7 @@ export function FlipSentences({
     const [currentSentence, setCurrentSentence] = useState(0);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    const startAnimation = () => {
+    const startAnimation = useCallback(() => {
         if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
@@ -23,7 +23,7 @@ export function FlipSentences({
         intervalRef.current = setInterval(() => {
             setCurrentSentence((prev) => (prev + 1) % sentences.length);
         }, 3000); // Increased from 2500 to 3000ms to reduce CPU usage
-    };
+    }, [sentences.length]);
 
     useEffect(() => {
         if (sentences.length === 0) return;
@@ -49,7 +49,7 @@ export function FlipSentences({
             }
             document.removeEventListener("visibilitychange", handleVisibilityChange);
         };
-    }, [sentences.length]); // Only depend on sentences.length to avoid unnecessary restarts
+    }, [sentences.length, startAnimation]);
 
     // Don't render anything if no sentences
     if (sentences.length === 0) {

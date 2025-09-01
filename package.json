@@ -1,7 +1,10 @@
 {
-  "name": "next_portfolio",
-  "version": "0.1.0",
+  "name": "vijay-k-andem-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Vijay K Andem's Business Analyst Portfolio - 13+ years in data visualization, business intelligence, and AI-augmented analytics",
+  "author": "Vijay K Andem <vijayandem@gmail.com>",
+  "keywords": ["business analyst", "data visualization", "power bi", "tableau", "portfolio", "next.js"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
