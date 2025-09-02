@@ -20,6 +20,11 @@ export const navLinks = [
         label: "Experience",
     },
     {
+        name: "contact",
+        href: "/contact",
+        label: "Contact",
+    },
+    {
         name: "resume",
         href: "/resume.pdf",
         label: "Resume",

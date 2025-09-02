@@ -7,7 +7,7 @@ import { SITE_INFO } from "./site";
 export const appConfig: IAppConfig = {
     profile: {
         name: 'Vijay K Andem',
-        image: '/hero/about-me.jpg',
+        image: '/hero/profile.jpg',
         email: 'vijayandem@gmail.com',
         location: 'Bengaluru, India',
         sentences: [
@@ -71,7 +71,7 @@ export const appConfig: IAppConfig = {
         {
             id: "0",
             companyName: "Strategic Career Transition",
-            companyLogo: "/hero/about-me.jpg",
+            companyLogo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/%3E%3C/svg%3E",
             isCurrentEmployer: false,
             positions: [
                 {
@@ -93,7 +93,7 @@ export const appConfig: IAppConfig = {
         {
             id: "1",
             companyName: "Cavinkare Pvt Ltd",
-            companyLogo: "https://media.licdn.com/dms/image/C4D0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/cavinkare_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            companyLogo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E",
             isCurrentEmployer: false,
             positions: [
                 {
@@ -114,7 +114,7 @@ export const appConfig: IAppConfig = {
         {
             id: "2",
             companyName: "IBM India Pvt Ltd",
-            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/ibm_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            companyLogo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23006699'%3E%3Cpath d='M0 0h8v3H0V0zm0 4h8v3H0V4zm0 4h8v3H0V8zm0 4h8v3H0v-3zm0 4h8v3H0v-3zm0 4h8v1H0v-1zM9 0h6v2H9V0zm0 3h6v2H9V3zm0 3h6v2H9V6zm0 3h6v2H9V9zm0 3h6v2H9v-2zm0 3h6v2H9v-2zm0 3h6v1H9v-1zM16 0h8v3h-8V0zm0 4h8v3h-8V4zm0 4h8v3h-8V8zm0 4h8v3h-8v-3zm0 4h8v3h-8v-3zm0 4h8v1h-8v-1z'/%3E%3C/svg%3E",
             positions: [
                 {
                     id: "2-1",
@@ -134,7 +134,7 @@ export const appConfig: IAppConfig = {
         {
             id: "3",
             companyName: "Indegene Life Systems Pvt Ltd",
-            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/indegene_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            companyLogo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300a86b'%3E%3Cpath d='M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-2V2.5a.5.5 0 0 0-.5-.5h-13a.5.5 0 0 0-.5.5V4H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM4 18V6h16v12H4z'/%3E%3C/svg%3E",
             positions: [
                 {
                     id: "3-1",
@@ -153,7 +153,7 @@ export const appConfig: IAppConfig = {
         {
             id: "4",
             companyName: "Infosys Ltd",
-            companyLogo: "https://media.licdn.com/dms/image/C4E0BAQH5Fj56u48a4w/company-logo_200_200/0/1630593301928/infosys_logo?e=1727308800&v=beta&t=ZJiJkYQ8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8Q8",
+            companyLogo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23007acc'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z'/%3E%3Cpath d='M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10a4 4 0 1 1 4-4 4 4 0 0 1-4 4z'/%3E%3C/svg%3E",
             positions: [
                 {
                     id: "4-1",

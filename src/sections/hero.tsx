@@ -1,6 +1,7 @@
 import { FlipSentences } from "@/components/common/flip-sentences";
 import { VerifiedIcon } from "@/components/common/verified-icon";
 import { ProfileHeader } from "@/components/hero/profile-header";
+import { ResumeModal } from "@/components/common/resume-modal";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { appConfig } from "@/configs/config";
@@ -18,8 +19,9 @@ export const HeroSection = () => {
                         height={200}
                         width={200}
                         src={appConfig.profile.image}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full object-cover object-center"
                         alt="Profile Picture"
+                        priority
                     />
                 </div>
                 {/* profile info */}
@@ -33,8 +35,8 @@ export const HeroSection = () => {
                     <div className="mt-4">
                         <FlipSentences sentences={appConfig.profile.sentences} />
                     </div>
-                    <div className="mt-6">
-                        <Link href={`mailto:${appConfig.profile.email}`}>
+                    <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                        <Link href="/contact">
                             <Button
                                 variant={"default"}
                                 className="bg-blue-500/80 hover:bg-blue-500/90 transition-colors text-primary rounded-xl cursor-pointer px-6 py-3 text-lg"
@@ -42,6 +44,7 @@ export const HeroSection = () => {
                                 Contact Me
                             </Button>
                         </Link>
+                        <ResumeModal />
                     </div>
                 </div>
             </div>
