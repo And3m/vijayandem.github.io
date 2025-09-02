@@ -76,31 +76,34 @@ export function ContactForm() {
         if (!validateForm()) return;
         
         setIsSubmitting(true);
+        setSubmitStatus('idle');
         
         try {
-            // Create mailto link with form data
-            const subject = `Portfolio Contact: ${formData.subject}`;
-            const body = `Name: ${formData.name}
-Email: ${formData.email}
-${formData.company ? `Company: ${formData.company}` : ''}
-${formData.projectType ? `Project Type: ${formData.projectType}` : ''}
-
-Message:
-${formData.message}`;
-            
-            const mailtoLink = `mailto:${appConfig.profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-            
-            setSubmitStatus('success');
-            setFormData({
-                name: "",
-                email: "",
-                company: "",
-                subject: "",
-                message: "",
-                projectType: ""
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
             });
-        } catch {
+
+            if (response.ok) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: "",
+                    email: "",
+                    company: "",
+                    subject: "",
+                    message: "",
+                    projectType: ""
+                });
+            } else {
+                const errorData = await response.json();
+                console.error('Email sending failed:', errorData);
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
@@ -190,6 +193,7 @@ ${formData.message}`;
                                             errors.name ? 'border-destructive' : 'border-border'
                                         }`}
                                         placeholder="Your full name"
+                                        suppressHydrationWarning
                                     />
                                     {errors.name && (
                                         <p className="text-destructive text-sm mt-1">{errors.name}</p>
@@ -210,6 +214,7 @@ ${formData.message}`;
                                             errors.email ? 'border-destructive' : 'border-border'
                                         }`}
                                         placeholder="your@email.com"
+                                        suppressHydrationWarning
                                     />
                                     {errors.email && (
                                         <p className="text-destructive text-sm mt-1">{errors.email}</p>
@@ -230,6 +235,7 @@ ${formData.message}`;
                                         onChange={handleInputChange}
                                         className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background text-foreground"
                                         placeholder="Your company"
+                                        suppressHydrationWarning
                                     />
                                 </div>
                                 
@@ -243,6 +249,7 @@ ${formData.message}`;
                                         value={formData.projectType}
                                         onChange={handleInputChange}
                                         className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 bg-background text-foreground"
+                                        suppressHydrationWarning
                                     >
                                         <option value="">Select project type</option>
                                         <option value="business-analysis">Business Analysis</option>
@@ -269,6 +276,7 @@ ${formData.message}`;
                                         errors.subject ? 'border-destructive' : 'border-border'
                                     }`}
                                     placeholder="Brief subject of your inquiry"
+                                    suppressHydrationWarning
                                 />
                                 {errors.subject && (
                                     <p className="text-destructive text-sm mt-1">{errors.subject}</p>
@@ -299,6 +307,7 @@ ${formData.message}`;
                                 type="submit" 
                                 className="w-full" 
                                 disabled={isSubmitting}
+                                suppressHydrationWarning
                             >
                                 {isSubmitting ? (
                                     "Sending..."

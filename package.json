@@ -4,7 +4,14 @@
   "private": true,
   "description": "Vijay K Andem's Business Analyst Portfolio - 13+ years in data visualization, business intelligence, and AI-augmented analytics",
   "author": "Vijay K Andem <vijayandem@gmail.com>",
-  "keywords": ["business analyst", "data visualization", "power bi", "tableau", "portfolio", "next.js"],
+  "keywords": [
+    "business analyst",
+    "data visualization",
+    "power bi",
+    "tableau",
+    "portfolio",
+    "next.js"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +26,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tabs": "^1.1.13",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@types/nodemailer": "^7.0.1",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -28,6 +36,7 @@
     "motion": "^12.23.12",
     "next": "^15.4.6",
     "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icon-cloud": "^4.1.7",
