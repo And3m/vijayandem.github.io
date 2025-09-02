@@ -23,6 +23,24 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        // Check environment variables
+        if (!process.env.SMTP_EMAIL || !process.env.SMTP_PASSWORD) {
+            console.error('Missing email configuration environment variables');
+            return NextResponse.json(
+                { 
+                    error: 'Email service is not configured. Please contact the site administrator.',
+                    details: 'SMTP credentials not found'
+                },
+                { status: 500 }
+            );
+        }
+
+        console.log('Attempting to send email with configuration:', {
+            smtpEmail: process.env.SMTP_EMAIL ? 'Set' : 'Not set',
+            smtpPassword: process.env.SMTP_PASSWORD ? 'Set' : 'Not set',
+            contactEmail: process.env.CONTACT_EMAIL ? 'Set' : 'Not set'
+        });
+
         // Create transporter based on service
         const transporter = nodemailer.createTransport({
             service: 'gmail',
@@ -71,8 +89,24 @@ export async function POST(request: NextRequest) {
             replyTo: email,
         };
 
+        // Verify transporter configuration
+        try {
+            await transporter.verify();
+            console.log('SMTP server connection verified');
+        } catch (verifyError) {
+            console.error('SMTP verification failed:', verifyError);
+            return NextResponse.json(
+                { 
+                    error: 'Email service configuration error. Please contact the site administrator.',
+                    details: 'SMTP server verification failed'
+                },
+                { status: 500 }
+            );
+        }
+
         // Send email
-        await transporter.sendMail(mailOptions);
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully:', info.messageId);
 
         return NextResponse.json(
             { message: 'Email sent successfully' },

@@ -32,6 +32,7 @@ export function ContactForm() {
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [errorMessage, setErrorMessage] = useState<string>('');
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
@@ -77,6 +78,7 @@ export function ContactForm() {
         
         setIsSubmitting(true);
         setSubmitStatus('idle');
+        setErrorMessage('');
         
         try {
             const response = await fetch('/api/contact', {
@@ -89,6 +91,7 @@ export function ContactForm() {
 
             if (response.ok) {
                 setSubmitStatus('success');
+                setErrorMessage('');
                 setFormData({
                     name: "",
                     email: "",
@@ -101,10 +104,12 @@ export function ContactForm() {
                 const errorData = await response.json();
                 console.error('Email sending failed:', errorData);
                 setSubmitStatus('error');
+                setErrorMessage(errorData.error || 'Failed to send message. Please try again.');
             }
         } catch (error) {
             console.error('Error sending email:', error);
             setSubmitStatus('error');
+            setErrorMessage('Network error. Please check your connection and try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -171,9 +176,15 @@ export function ContactForm() {
                         )}
                         
                         {submitStatus === 'error' && (
-                            <div className="mb-4 p-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg flex items-center gap-2">
-                                <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
-                                <span className="text-red-700 dark:text-red-300">Failed to send message. Please try again.</span>
+                            <div className="mb-4 p-3 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-2">
+                                <AlertCircle className="h-5 w-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+                                <div className="text-red-700 dark:text-red-300">
+                                    <div className="font-medium">Failed to send message</div>
+                                    <div className="text-sm mt-1">{errorMessage}</div>
+                                    <div className="text-xs mt-2 opacity-75">
+                                        If the problem persists, you can email directly at {appConfig.profile.email}
+                                    </div>
+                                </div>
                             </div>
                         )}
                         
