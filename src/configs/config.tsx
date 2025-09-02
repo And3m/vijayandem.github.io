@@ -25,7 +25,7 @@ export const appConfig: IAppConfig = {
                 icon: Lightbulb,
                 text: (
                     <>
-                        Specializing in Power BI, Tableau & Streamlit
+                        Gen-AI Enthusiast
                     </>
                 ),
             },

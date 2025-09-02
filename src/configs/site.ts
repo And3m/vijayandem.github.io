@@ -1,6 +1,6 @@
 export const SITE_INFO = {
     site_name: 'Home',
-    url: 'https://and3m.github.io',
+    url: 'https://vijayandem.vercel.app',
     meta_desc: 'Business Analyst & Data Visualization Specialist with expertise in Power BI, Tableau, and Streamlit dashboard development. Transforming complex datasets into compelling visual stories.',
     keywords: ['Business Analyst', 'Data Visualization', 'Power BI', 'Tableau', 'Streamlit', 'Vijay Andem', 'Data Analytics']
 }

@@ -18,6 +18,8 @@ export default function Layout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Favicon */}
+        <link rel="icon" href="/branding/logo.jpg" type="image/jpeg" />
         {/* Preload critical resources */}
         <link rel="preload" href="/hero/about-me.jpg" as="image" type="image/jpeg" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
