@@ -1,34 +1,38 @@
+"use client";
+
+import { Suspense } from "react";
 import { ProjectsCarousel } from "@/components/projects/projects-carousel";
+import { ProjectErrorBoundary } from "@/components/projects/project-error-boundary";
 import { ALL_PROJECTS } from "@/configs/projects";
 
-export type IProjects = {
-    type: "web" | "app" | "ai" | "ml" | "tool";
-    title: string;
-    shortDescription: string;
-    longDescription: string;
-    stack: string[];
-    image?: string;
-    repoUrl?: string;
-};
-
 export function Projects() {
-    const projects = ALL_PROJECTS.slice(0, 8); // Show more projects
+    const projects = ALL_PROJECTS; // Show all projects
     return (
-        <div id="projects" className="flex w-full justify-center pt-14">
-            <div className="flex flex-col justify-center gap-4 md:gap-8 max-w-4xl w-full px-6 md:px-0">
-                <div className="mb-6">
-                    <div className="text-4xl font-bold mb-2">
-                        Projects
+        <section id="projects" className="flex w-full justify-center py-16 md:py-20 bg-gradient-to-b from-background via-background/95 to-secondary/30">
+            <div className="flex flex-col justify-center gap-6 md:gap-10 max-w-6xl w-full px-6 md:px-8">
+                <div className="text-center mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        Featured Work
                     </div>
-                    <p className='max-w-2xl text-secondary-foreground/60'>
-                        Here are some of my recent projects showcasing my expertise in data analytics, business intelligence, and AI/ML applications. These projects demonstrate my ability to transform complex datasets into compelling visual stories and intelligent solutions.
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary to-primary/80 bg-clip-text text-transparent">
+                        My Projects
+                    </h2>
+                    <p className='max-w-3xl mx-auto text-lg text-muted-foreground/80 leading-relaxed'>
+                        Explore my portfolio of data analytics, business intelligence, and AI/ML applications. 
+                        Each project showcases my ability to transform complex datasets into compelling visual stories and intelligent solutions.
                     </p>
                 </div>
-                <ProjectsCarousel
-                    projects={projects}
-                    autoplay={false}
-                />
+                <ProjectErrorBoundary>
+                    <Suspense fallback={<div className="h-64 bg-muted rounded animate-pulse"></div>}>
+                        <ProjectsCarousel
+                            projects={projects}
+                            autoplay={false}
+                            className="w-full"
+                        />
+                    </Suspense>
+                </ProjectErrorBoundary>
             </div>
-        </div>
+        </section>
     );
 }

@@ -1,4 +1,4 @@
-import { IProjects } from "@/sections/projects";
+import { IProjects } from "@/types/projects";
 
 {/* 1270x760px images best */ }
 export const ALL_PROJECTS: IProjects[] = [
@@ -10,7 +10,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Model Context Protocol implementation for data analysis with AI Agent Integration and data processing capabilities. Features automated analytics through intelligent tool discovery and an extensible framework for custom data analysis workflows.",
         image: "/projects/mcp-data-analysis-toolkit.png",
         stack: ["Python", "MCP", "AI Agents", "Data Analysis", "Protocol Buffers", "LLMs"],
-        repoUrl: "https://github.com/And3m/mcp-data-analysis-toolkit",
+        repoUrl: "https://github.com/MCP-Data-Analysis-Toolkit/MCP-Data-Analysis-Toolkit",
     },
     {
         type: "ai",
@@ -20,7 +20,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Interactive Chat Interface with 2048-token responses, real-time monitoring and system analytics. Features advanced commands (/status, /metrics, /help) and is 100% local & private - no external APIs required.",
         image: "/projects/interactive-ai-chat-agent.png",
         stack: ["Python", "Chainlit", "Ollama", "Llama 3.2 3B", "psutil", "Real-time Analytics"],
-        repoUrl: "https://github.com/And3m/interactive-ai-chat-agent",
+        repoUrl: "https://github.com/And3m/chainlit-ollama-interactive-agent",
     },
     {
         type: "ai",
@@ -30,7 +30,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Comprehensive Tutorials from basics to advanced with hands-on learning and practical examples. Features real-world projects including chatbots, RAG systems, and agents with a structured learning path for all skill levels.",
         image: "/projects/langchain-playbook.png",
         stack: ["Python", "LangChain", "OpenAI", "Anthropic", "RAG", "Vector Databases"],
-        repoUrl: "https://github.com/And3m/langchain-playbook",
+        repoUrl: "https://github.com/And3m/Langchain_playbook",
     },
     {
         type: "app",
@@ -40,7 +40,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Interactive Streamlit dashboard for real-time sales analytics with KPIs, advanced analytics, and modern Plotly visualizations. Features include real-time monitoring, trend analysis, and engaging user experience with modern visualizations.",
         image: "/projects/coffee-shop-dashboard.png",
         stack: ["Streamlit", "Pandas", "Plotly", "Python"],
-        repoUrl: "https://github.com/And3m/coffee-shop-sales-dashboard",
+        repoUrl: "https://github.com/And3m/Coffee-Shop-Sales-Analysis-Dashboard-Streamlit-Pandas-Plotly",
     },
     {
         type: "app",
@@ -50,7 +50,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Comprehensive HR analytics dashboard in Tableau with workforce insights and key HR trends. Features include comprehensive HR analytics with workforce insights, data pre-processing and visualization, key HR trends analysis and performance metrics, and in-depth employee insights and retention analytics.",
         image: "/projects/hr-dashboard.png",
         stack: ["Tableau", "Data Preprocessing", "HR Analytics"],
-        repoUrl: "https://github.com/And3m/hr-dashboard-analytics",
+        repoUrl: "https://github.com/And3m/HR-Dashboard-Tableau",
     },
     {
         type: "app",
@@ -60,7 +60,7 @@ export const ALL_PROJECTS: IProjects[] = [
             "Power BI dashboard analyzing restaurant ratings, consumer behavior, and trends in Mexico. Features include 5-page interactive dashboard with comprehensive insights, geographic analysis of restaurant distribution, consumer behavior patterns and demographic correlations, and rating trends analysis across different categories.",
         image: "/projects/restaurant-ratings.png",
         stack: ["Power BI", "DAX", "Power Query", "Excel"],
-        repoUrl: "https://github.com/And3m/restaurant-ratings-analysis",
+        repoUrl: "https://github.com/And3m/Restaurant-Ratings-Analysis-PowerBI",
     },
     {
         type: "app",
@@ -70,6 +70,6 @@ export const ALL_PROJECTS: IProjects[] = [
             "Comprehensive EDA of sales performance data with customer segmentation and sales trend forecasting. Features include comprehensive exploratory data analysis of sales performance data, customer segmentation analysis and profiling, performance metrics visualization and insights, and sales trend identification and forecasting.",
         image: "/projects/superstore-analysis.png",
         stack: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-        repoUrl: "https://github.com/And3m/superstore-sales-analysis",
+        repoUrl: "https://github.com/And3m/superstore-sales-analysis-eda",
     },
 ];

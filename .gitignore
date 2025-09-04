@@ -36,6 +36,21 @@ yarn-error.log*
 .env.production.local
 .env.development.local
 
+# security and sensitive files
+*.key
+*.pem
+*.p12
+*.keystore
+config.json
+secrets.json
+credentials.json
+
+# logs and temporary files
+*.log
+nul
+tmp/
+temp/
+
 # Claude Code directory
 .claude/
 
